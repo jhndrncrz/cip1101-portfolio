@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Plans | Common Website Components</title>
+
+  <link rel="shortcut icon" href="../_global/globe-solid.svg" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="../_global/global.css">
+  <link rel="stylesheet" href="../_global/reset.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="./script.js"></script>
+  <script src="../_global/global.js"></script>
+</head>
+
+<body>
+  <aside id="sidebar" onmouseenter="openSidebar();" onmouseleave="closeSidebar();">
+    <div id="sidebar-logo">
+      C
+    </div>
+
+    <hr>
+
+    <nav>
+      <ul>
+        <li class="nav-item">
+          <i class="fa-solid fa-house"></i> <a class="sidebar-retract" href="../">Home</a>
+        </li>
+        <li class="nav-item">
+          <i class="fa-solid fa-cube"></i> <a class="sidebar-retract" href="./">Plans</a>
+        </li>
+        <li class="nav-item">
+          <i class="fa-solid fa-glasses"></i> <a class="sidebar-retract" href="../about-us">About Us</a>
+        </li>
+        <li class="nav-item">
+          <i class="fa-solid fa-phone"></i> <a class="sidebar-retract" href="../contact-us">Contact Us</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div>
+      <div id="sign-in" class="nav-item">
+        <i class="fa-solid fa-user-plus"></i> <a class="sidebar-retract" href="../sign-in">Sign In</a>
+      </div>
+    </div>
+  </aside>
+
+  <main class="parallax">
+    <svg id="blob4" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M38.7,-53.8C46.7,-55,47.3,-38.5,48.8,-25.2C50.3,-11.9,52.7,-2,46.2,2.9C39.7,7.8,24.3,7.8,16.8,12.2C9.3,16.5,9.7,25.4,6.4,30.3C3.1,35.2,-3.9,36.1,-7.5,32.1C-11.2,28.1,-11.4,19.1,-18.3,14.2C-25.2,9.2,-38.6,8.4,-49.5,0.8C-60.3,-6.7,-68.5,-20.8,-65.3,-30.7C-62.1,-40.5,-47.6,-45.9,-34.8,-42.5C-22,-39.1,-11,-26.8,2.2,-30.1C15.3,-33.5,30.7,-52.5,38.7,-53.8Z"
+        transform="translate(100 100)" />
+    </svg>
+
+    <svg id="blob1" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M61.5,-48.2C72,-35.9,67.5,-10.7,59.4,9C51.2,28.8,39.5,43.1,22.3,54.6C5.1,66.1,-17.5,74.6,-30.8,67C-44.2,59.4,-48.3,35.7,-49,15.9C-49.7,-3.8,-47,-19.6,-38.3,-31.5C-29.6,-43.5,-14.8,-51.6,5.4,-55.9C25.5,-60.1,51,-60.6,61.5,-48.2Z"
+        transform="translate(100 100)" />
+    </svg>
+
+    <svg id="blob2" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M36.9,-61.4C48.3,-57.4,58.3,-48.4,54.8,-37.4C51.2,-26.3,34.1,-13.2,37,1.7C39.9,16.5,62.8,33,60.6,34.1C58.4,35.2,31.1,20.8,16.8,27.5C2.5,34.2,1.2,62.1,-7.3,74.7C-15.8,87.2,-31.5,84.6,-34.2,71.1C-36.9,57.7,-26.5,33.5,-28.4,19.9C-30.3,6.2,-44.4,3.1,-45,-0.3C-45.6,-3.8,-32.7,-7.6,-29.5,-18.9C-26.2,-30.3,-32.7,-49.1,-29.5,-57.9C-26.2,-66.6,-13.1,-65.3,-0.2,-65C12.8,-64.7,25.5,-65.5,36.9,-61.4Z"
+        transform="translate(100 100)" />
+    </svg>
+
+    <svg id="blob3" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M42,-69.7C50.2,-60,49.9,-41.3,57.1,-25.9C64.4,-10.6,79.3,1.5,77.8,11.1C76.3,20.8,58.5,28,45.3,34.3C32.1,40.6,23.6,45.9,13.5,51.2C3.4,56.6,-8.2,61.9,-18.1,59.8C-28,57.7,-36.2,48.1,-46.8,38.8C-57.4,29.6,-70.5,20.8,-77.7,7.8C-84.9,-5.3,-86.2,-22.6,-80.3,-37.2C-74.5,-51.8,-61.5,-63.7,-46.9,-70.5C-32.4,-77.3,-16.2,-79,0.3,-79.5C16.9,-80,33.7,-79.3,42,-69.7Z"
+        transform="translate(100 100)" />
+    </svg>
+
+    <svg id="blob5" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M38.5,-55.1C50,-60,59.7,-50,59,-38.3C58.3,-26.7,47.2,-13.3,45.8,-0.8C44.4,11.7,52.5,23.3,50.8,30.9C49.1,38.4,37.6,41.8,27.5,43.9C17.4,46,8.7,46.7,1.2,44.6C-6.3,42.5,-12.6,37.6,-15.2,31.2C-17.9,24.8,-16.9,17,-30.3,11.6C-43.7,6.1,-71.6,3.1,-76.7,-2.9C-81.8,-9,-64.2,-17.9,-50.8,-23.4C-37.3,-28.8,-28.1,-30.8,-20.4,-28.1C-12.6,-25.5,-6.3,-18.2,3.6,-24.4C13.5,-30.6,26.9,-50.3,38.5,-55.1Z"
+        transform="translate(100 100)" />
+    </svg>
+
+    
+    <div id="cards-container">
+      <div class="card">
+        <div class="card-header">
+          Basic
+        </div>
+        <div class="card-body">
+          <div class="card-price">
+            <span class="amount">Free</span><span>/lifetime</span>
+          </div>
+          <hr>
+          <ul>
+            <li><i class="fa-solid fa-check"></i> Perk 1</li>
+            <li><i class="fa-solid fa-check"></i> Perk 2</li>
+            <li><i class="fa-solid fa-x"></i> <del>Perk 3</del></li>
+            <li><i class="fa-solid fa-x"></i> <del>Perk 4</del></li>
+            <li><i class="fa-solid fa-x"></i> <del>Perk 5</del></li>
+          </ul>
+          <button>Avail Now!</button>
+        </div>
+        
+      </div>
+      <div class="card focused-card">
+        <div class="card-header">
+          Premium
+          <div class="tag">Best Value!</div>
+        </div>
+        <div class="card-body">
+          <div class="card-price">
+            <span class="amount">15,000.00</span><span>/year</span>
+            
+          </div>
+          <hr>
+          <ul>
+            <li><i class="fa-solid fa-check"></i> Perk 1</li>
+            <li><i class="fa-solid fa-check"></i> Perk 2</li>
+            <li><i class="fa-solid fa-check"></i> Perk 3</li>
+            <li><i class="fa-solid fa-check"></i> Perk 4</li>
+            <li><i class="fa-solid fa-x"></i> <del>Perk 5</del></li>
+          </ul>
+          <button>Avail Now!</button>
+        </div>
+        
+      </div>
+      <div class="card">
+        <div class="card-header">
+          Deluxe
+        </div>
+        <div class="card-body">
+          <div class="card-price">
+            <span class="amount">20,000.00</span><span>/year</span>
+          </div>
+          <hr>
+          <ul>
+            <li><i class="fa-solid fa-check"></i> Perk 1</li>
+            <li><i class="fa-solid fa-check"></i> Perk 2</li>
+            <li><i class="fa-solid fa-check"></i> Perk 3</li>
+            <li><i class="fa-solid fa-check"></i> Perk 4</li>
+            <li><i class="fa-solid fa-check"></i> Perk 5</li>
+          </ul>
+          <button>Avail Now!</button>
+        </div>
+        
+      </div>
+    </div>
+  </main>
+
+  <div id="explanation" class="parallax">
+    <svg id="blob6" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M38.7,-53.8C46.7,-55,47.3,-38.5,48.8,-25.2C50.3,-11.9,52.7,-2,46.2,2.9C39.7,7.8,24.3,7.8,16.8,12.2C9.3,16.5,9.7,25.4,6.4,30.3C3.1,35.2,-3.9,36.1,-7.5,32.1C-11.2,28.1,-11.4,19.1,-18.3,14.2C-25.2,9.2,-38.6,8.4,-49.5,0.8C-60.3,-6.7,-68.5,-20.8,-65.3,-30.7C-62.1,-40.5,-47.6,-45.9,-34.8,-42.5C-22,-39.1,-11,-26.8,2.2,-30.1C15.3,-33.5,30.7,-52.5,38.7,-53.8Z"
+        transform="translate(100 100)" />
+    </svg>
+
+    <svg id="blob7" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M61.5,-48.2C72,-35.9,67.5,-10.7,59.4,9C51.2,28.8,39.5,43.1,22.3,54.6C5.1,66.1,-17.5,74.6,-30.8,67C-44.2,59.4,-48.3,35.7,-49,15.9C-49.7,-3.8,-47,-19.6,-38.3,-31.5C-29.6,-43.5,-14.8,-51.6,5.4,-55.9C25.5,-60.1,51,-60.6,61.5,-48.2Z"
+        transform="translate(100 100)" />
+    </svg>
+
+    <svg id="blob8" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M36.9,-61.4C48.3,-57.4,58.3,-48.4,54.8,-37.4C51.2,-26.3,34.1,-13.2,37,1.7C39.9,16.5,62.8,33,60.6,34.1C58.4,35.2,31.1,20.8,16.8,27.5C2.5,34.2,1.2,62.1,-7.3,74.7C-15.8,87.2,-31.5,84.6,-34.2,71.1C-36.9,57.7,-26.5,33.5,-28.4,19.9C-30.3,6.2,-44.4,3.1,-45,-0.3C-45.6,-3.8,-32.7,-7.6,-29.5,-18.9C-26.2,-30.3,-32.7,-49.1,-29.5,-57.9C-26.2,-66.6,-13.1,-65.3,-0.2,-65C12.8,-64.7,25.5,-65.5,36.9,-61.4Z"
+        transform="translate(100 100)" />
+    </svg>
+
+    <svg id="blob9" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M42,-69.7C50.2,-60,49.9,-41.3,57.1,-25.9C64.4,-10.6,79.3,1.5,77.8,11.1C76.3,20.8,58.5,28,45.3,34.3C32.1,40.6,23.6,45.9,13.5,51.2C3.4,56.6,-8.2,61.9,-18.1,59.8C-28,57.7,-36.2,48.1,-46.8,38.8C-57.4,29.6,-70.5,20.8,-77.7,7.8C-84.9,-5.3,-86.2,-22.6,-80.3,-37.2C-74.5,-51.8,-61.5,-63.7,-46.9,-70.5C-32.4,-77.3,-16.2,-79,0.3,-79.5C16.9,-80,33.7,-79.3,42,-69.7Z"
+        transform="translate(100 100)" />
+    </svg>
+
+    <svg id="blob10" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M38.5,-55.1C50,-60,59.7,-50,59,-38.3C58.3,-26.7,47.2,-13.3,45.8,-0.8C44.4,11.7,52.5,23.3,50.8,30.9C49.1,38.4,37.6,41.8,27.5,43.9C17.4,46,8.7,46.7,1.2,44.6C-6.3,42.5,-12.6,37.6,-15.2,31.2C-17.9,24.8,-16.9,17,-30.3,11.6C-43.7,6.1,-71.6,3.1,-76.7,-2.9C-81.8,-9,-64.2,-17.9,-50.8,-23.4C-37.3,-28.8,-28.1,-30.8,-20.4,-28.1C-12.6,-25.5,-6.3,-18.2,3.6,-24.4C13.5,-30.6,26.9,-50.3,38.5,-55.1Z"
+        transform="translate(100 100)" />
+    </svg>
+    <h1>Subscription</h1>
+    <p>A <span>Subscription</span>/<span>Plans</span> page is used to show users the available plans/packages/subscriptions offered by the company.</p>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,376 @@
+@import url("./reset.css");
+
+* {
+    cursor: url("../images/cursor.svg"), default;
+}
+
+*:hover {
+    cursor: url("../images/cursor.svg"), pointer;
+}
+
+:root {
+    --ivos-red: #D50117;
+    --ivos-orange: #CC6725;
+    --ivos-yellow: #FCD310; /* #EC9E3E; */
+    --ivos-white: #FFFFFF;
+    --ivos-black: #000000;
+}
+
+@font-face {
+    font-family: "Arsis";
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    font-optical-sizing: auto;
+    src: url("https://db.onlinewebfonts.com/t/d584607a473c85efda8ceb21eba38539.woff2") format("woff2");
+    unicode-range: U+0000-00FF;
+}
+
+@font-face {
+    font-family: "Oswald";
+    font-style: normal;
+    font-weight: 200 700;
+    font-display: swap;
+    font-optical-sizing: auto;
+    src: url("https://fonts.gstatic.com/s/oswald/v53/TK3iWkUHHAIjg752GT8G.woff2") format("woff2");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: "Abril Fatface";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("https://fonts.gstatic.com/s/abrilfatface/v23/zOL64pLDlL1D99S8g8PtiKchq-dmjQ.woff2") format("woff2");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* GENERAL */
+body {
+    font-family: "Oswald";
+    font-size: 20px;
+    color: var(--ivos-black);
+}
+
+#snap {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+/* BANNER */
+#banner-container {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    background-color: black;
+
+    display: grid;
+    grid-template: 1fr / 1fr;
+}
+
+#banner-video {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: brightness(0.25);
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+#banner-text {
+    z-index: 100;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+
+    color: var(--ivos-white);
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+#banner-clip {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row nowrap;
+
+    font-family: "Arsis";
+    font-size: 25em;
+}
+
+#banner-clip>p {
+    color: var(--ivos-yellow);
+    background-clip: text;
+    background-size: cover;
+    line-height: 0.75em;
+    transition: all 0.5s ease-in-out;
+}
+
+#banner-text>p {
+    font-size: 2em;
+}
+
+#banner-text>button {
+    text-transform: uppercase;
+}
+
+#banner-album-link {
+    transition: all 0.5s ease-in-out;
+}
+
+#banner-album-link:hover {
+    color: var(--ivos-yellow);
+}
+
+/* HEADER */
+header {
+    color: var(--ivos-white);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+#header-container {
+    padding: 1em 2em;
+    background-color: var(--ivos-red);
+}
+
+#header-logo {
+    width: 2em;
+    height: 2em;
+    background-image: url("../images/logo-white.svg");
+    transition: all 1s ease-in-out;
+}
+
+#header-logo:hover {
+    transform: rotate(360deg) scale(125%, 125%);
+}
+
+#header-links {
+    display: flex;
+
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav > ul {
+    display: flex;
+
+    flex-flow: row nowrap;
+    align-items: center;
+
+    gap: 2em;
+}
+
+header nav > ul a {
+    padding: 0.25em 0.5em;
+}
+
+header nav > ul a:hover {
+    background-color: var(--ivos-white);
+    color: var(--ivos-red);
+}
+
+#header-shop {
+    padding: 0.25em 0.5em;
+    border: 1px solid var(--ivos-white);
+    transform: perspective(1px) translateZ(0);
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+
+#header-shop:hover {
+    color: var(--ivos-red);
+    transform: scale(1.2);
+}
+
+#header-shop:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background: var(--ivos-white);
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    transition: transform 0.3s ease-in-out;
+}
+
+#header-shop:hover:before {
+    transform: scale(1);
+}
+
+/* BANNER */
+/* BANNER */
+#banner-container {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    background-color: black;
+
+    display: grid;
+    grid-template: 1fr / 1fr;
+}
+
+#banner-video {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: brightness(0.25);
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+#banner-text {
+    z-index: 100;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+
+    color: white;
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+#banner-clip {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row nowrap;
+
+    font-family: "Arsis";
+    font-size: 25em;
+}
+
+#banner-clip > p {
+    color: var(--ivos-yellow);
+    background-clip: text;
+    background-size: cover;
+    line-height: 0.75em;
+    transition: all 0.5s ease-in-out;
+}
+
+#banner-clip > p:hover {
+    color: transparent;
+    margin: 0 0.05em;
+}
+
+#banner-i {
+    background-image: url("../images/ivos-unique.jpg");
+}
+
+#banner-v {
+    background-image: url("../images/ivos-blaster.jpg");
+}
+
+#banner-o {
+    background-image: url("../images/ivos-zild.jpg");
+}
+
+#banner-s {
+    background-image: url("../images/ivos-badjao.jpg");
+}
+
+#banner-text > p {
+    font-size: 2em;
+}
+
+#banner-text > button {
+    text-transform: uppercase;
+}
+
+#banner-album-link {
+    transition: all 0.5s ease-in-out;
+}
+
+#banner-album-link:hover {
+    color: var(--ivos-yellow);
+}
+
+/* FOOTER */
+footer {
+    z-index: 1000;
+    background: var(--ivos-orange);
+}
+
+#footer-container {
+    padding: 2em 2em;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+
+    gap: 2em;
+}
+
+footer hr {
+    width: 100%;
+    border: 1px solid var(--ivos-black);
+}
+
+#footer-links {
+    width: 50%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer nav>ul {
+    display: flex;
+
+    flex-flow: row nowrap;
+    align-items: center;
+
+    gap: 2em;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+#footer-logo-link {
+    place-self: center center;
+}
+
+#footer-logo {
+    width: 2em;
+    height: 2em;
+    background-image: url("../images/logo.svg");
+    transition: all 1s ease-in-out;
+}
+
+#footer-logo:hover {
+    transform: rotate(360deg) scale(125%, 125%);
+}
+
+#footer-album {
+    width: 50%;
+}
+
+footer nav {
+    width: 50%;
+    display: flex;
+
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+}
+
+/* PARALLAX */
+.parallax {
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    scroll-snap-align: start;
+}
+
+.full-container {
+    height: 100vh;
+}

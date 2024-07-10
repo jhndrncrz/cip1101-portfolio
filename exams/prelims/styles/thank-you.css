@@ -1,0 +1,142 @@
+/* DESCRIPTION */
+.thank-you {
+    height: 100vh;
+
+    position: relative;
+
+    background-color: var(--color-pale-white);
+}
+
+
+.thank-you-container {
+    overflow: hidden;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.thank-you-content {
+    margin-top: -50pt;
+}
+
+.thank-you-inner-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.thank-you-content h1 {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 20pt;
+    font-size: 48pt;
+    color: var(--color-orange);
+}
+
+.thank-you-logo {
+    width: 30%;
+    animation: logo-spin 40s linear infinite;
+}
+
+.thank-you-zomma {
+    padding: 0 5pt;
+    margin-bottom: -7pt;
+    height: 45pt;
+    display: inline-block;
+}
+
+@keyframes logo-spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.return-to-home {
+    border: 2pt solid var(--color-orange);
+    padding: 4pt;
+    font-size: 16pt;
+    border-radius: 4pt;
+    color: var(--color-orange);
+    transition-property: color, background-color;
+    transition-duration: 0.25s;
+    transition-timing-function: ease-in-out;
+}
+
+.return-to-home:hover {
+    color: var(--color-pale-white);
+    background-color: var(--color-orange);
+}
+
+.return-to-home strong {
+    color: var(--color-orange);
+    transition-property: color;
+    transition-duration: 0.25s;
+    transition-timing-function: ease-in-out;
+}
+
+.return-to-home:hover strong {
+    color: var(--color-yellow);
+}
+
+/* RECTANGLES */
+.rectangles-top {
+    overflow: hidden;
+    justify-content: right;
+    z-index: 0;
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+
+.rectangles-bottom {
+    z-index: 0;
+    width: 40%;
+    position: absolute;
+    bottom: 0;
+}
+
+.rectangle {
+    position: relative;
+    border-radius: 24pt;
+    height: 36pt;
+    transition: transform 0.5s ease-in-out;
+}
+
+.rectangle-left {
+    left: -40%;
+}
+
+.rectangle-right {
+    height: 48pt;
+    margin-left: auto;
+    right: -60%;
+}
+
+.rectangle:hover {
+    transform: translate(10%, 0);
+}
+
+.rectangle-yellow {
+    width: 65%;
+    background-color: var(--color-yellow);
+}
+
+.rectangle-red {
+    width: 75%;
+    background-color: var(--color-red);
+}
+
+.rectangle-green {
+    width: 85%;
+    background-color: var(--color-green);
+}
+
+.rectangle-orange {
+    width: 95%;
+    background-color: var(--color-orange);
+}

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jhndrncrz | About Me</title>
+    
+    <style>
+        @font-face {
+            font-family: dancing-script;
+            src: url("https://jhndrncrz.github.io/cip1101-personal-portfolio/dancing-script.woff");
+        }
+
+        @font-face {
+            font-family: script1-script-casual;
+            src: url("https://jhndrncrz.github.io/cip1101-personal-portfolio/script1-script-casual.woff");
+        }
+
+        body {
+            min-width: 600px;
+            width: 80%;
+            margin: auto;
+        }
+        /*Text*/
+        h2 {
+            margin: 0;
+            padding: 5pt;
+            font-family: script1-script-casual, sans-serif;
+            font-weight: bold;
+            color: white;
+            text-transform: uppercase;
+        }
+        h3 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            color: #e4001b;
+        }
+        p, li {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* Banner */
+        .banner {
+            height: 350pt;
+            margin: 10pt;
+
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #e4001b;
+        }
+
+        .banner-photo {
+            position: absolute;
+            height: 100%;
+            left: 0pt;
+        }
+
+        .banner-logo {
+            position: absolute;
+            width: 60%;
+        }
+
+        /* Footer */
+        .copyright {
+            text-align: center;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Sections */
+        .section {
+            width: min-content;
+            margin: 10pt;
+        }
+
+        .blue {
+            border: 3pt solid #014a95;
+            box-shadow: 5pt 5pt #014a95;
+        }
+
+        .red {
+            border: 3pt solid #e4001b;
+            box-shadow: 5pt 5pt #e4001b;
+        }
+
+        .blue .section-header  {
+            width: 100%;
+            margin: 0;
+            
+            background-color: #014a95;
+        }
+
+        .red .section-header  {
+            width: 100%;
+            margin: 0;
+            
+            background-color: #e4001b;
+        }   
+
+        .section-body {
+            padding: 0pt;
+            display: flex;
+        }
+
+        .main-image {
+            height: 600px;
+            width: 800px;
+        }
+
+        .two-column {
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="banner">
+            <img class="banner-photo" src="https://jhndrncrz.github.io/cip1101-personal-portfolio/banner-photo.svg" alt="Posterized photo of jhndrncrz">
+            <img class="banner-logo" src="https://jhndrncrz.github.io/cip1101-images/banner-logo.svg" alt="Logo of jhndrncrz">
+        </div>
+    </header>
+
+    <main>
+        <article class="section red">
+            <div class="section-header">
+                <h2>
+                    A Car in a Road
+                </h2>
+            </div>
+
+            <div class="section-body">
+                <img class="main-image" src="photo.jpg" alt="" usemap="#car-in-road">
+                <map name="#car-in-road">
+                    <area target="" alt="Car" title="Car" href="https://en.wikipedia.org/wiki/Car" coords="38,301,409,367" shape="rect">
+                    <area target="" alt="Car" title="Car" href="https://en.wikipedia.org/wiki/Car" coords="127,224,321,300" shape="rect">
+                    <area target="" alt="Traffic Cone" title="Traffic Cone" href="https://en.wikipedia.org/wiki/Traffic_cone" coords="592,434,620,354,648,435,665,435,666,451,573,452,575,436" shape="poly">
+                    <area target="" alt="Traffic Cone" title="Traffic Cone" href="https://en.wikipedia.org/wiki/Traffic_cone" coords="720,434,748,354,776,435,793,435,794,451,701,452,703,436" shape="poly">
+                    <area target="" alt="Wheel" title="Wheel" href="https://en.wikipedia.org/wiki/Wheel" coords="113,410,45" shape="circle">
+                    <area target="" alt="Wheel" title="Wheel" href="https://en.wikipedia.org/wiki/Wheel" coords="331,410,45" shape="circle">
+                </map>
+            </div>
+
+        </article>
+    </main>
+
+    <footer>
+        <hr>
+        <p class="copyright">Copyright &copy; 2024. John Adrian Cruz</p>
+    </footer>
+</body>
+</html>

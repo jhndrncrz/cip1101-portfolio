@@ -1,0 +1,357 @@
+html {
+    font-family: "Kanit";
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.socials {
+    padding: 0.5rem 0.25rem;
+
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 0.25rem;
+
+    position: fixed;
+    left: 0;
+    top: 50%;
+
+    background-color: var(--gm-light);
+
+    transform: translateY(-50%);
+
+    .socials__link {
+        padding: 0.25rem;
+
+        text-align: center;
+
+        color: var(--gm-primary);
+
+        &:hover {
+            color: var(--gm-light);
+            background-color: var(--gm-secondary);
+        }
+    }
+}
+
+.banner {
+    height: 100vh;
+
+    display: flex;
+    flex-flow: column nowrap;
+
+    .banner__content {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+
+        display: grid;
+        place-items: center;
+
+        position: relative;
+        flex-grow: 1;
+
+        background-color: var(--gm-primary);
+        
+        .banner__content__photo {
+            height: 100%;
+
+            position: absolute;
+            left: 0;
+        }
+
+        .banner__content__logo {
+            transform: rotate(-10deg) scale(500%);
+        }
+    }
+
+
+    .banner__navigation {
+        width: 100%;
+
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        gap: 1rem;
+        
+        background-color: var(--gm-secondary);
+        
+        .banner__navigation__link {
+            padding: 1rem 0.5rem;
+
+            color: var(--gm-light);
+
+            &:hover {
+                color: var(--gm-primary);
+                background-color: var(--gm-light);
+            }
+        }
+    }
+}
+
+.logo {
+    display: grid;
+    place-items: center;
+
+    .logo__ellipse {
+        width: 8rem;
+        height: 3rem;
+
+        position: absolute;
+        background-color: var(--gm-light);            
+
+        border-radius: 50%;
+
+        animation: logo__ellipse__spin 10s ease-in-out infinite;
+    }
+
+    .logo__good-morning {
+        position: relative;
+        top: 20%;
+        
+        font-family: "gm-brush";
+        font-size: 1.1rem;
+
+        text-align: center;
+        text-transform: uppercase;
+
+        color: var(--gm-secondary);
+
+        paint-order: stroke fill;
+        -webkit-text-stroke: 3px var(--gm-light);
+
+        animation: logo__good-morning__levitate 2s ease-in-out infinite alternate;
+    }
+
+    .logo__jhndrncrz {
+        position: relative;
+        top: -20%;
+
+        font-family: "gm-script";
+        font-size: 1.8rem;
+        font-weight: bold;
+
+        text-align: center;
+
+        color: var(--gm-primary);
+
+        paint-order: stroke fill;
+        -webkit-text-stroke: 3px var(--gm-light); 
+
+        animation: logo__jhndrncrz__levitate 3s ease-in-out infinite alternate-reverse;
+    }
+}
+
+@keyframes logo__ellipse__spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    10% {
+        transform: rotate(5deg);
+    }
+    20% {
+        transform: rotate(-9deg);
+    }
+    30% {
+        transform: rotate(6deg);
+    }
+    40% {
+        transform: rotate(-7deg);
+    }
+    50% {
+        transform: rotate(9deg);
+    }
+    60% {
+        transform: rotate(-5deg);
+    }
+    90% {
+        transform: rotate(10deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes logo__good-morning__levitate {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(0.2rem);
+    }
+}
+
+@keyframes logo__jhndrncrz__levitate {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(0.1rem);
+    }
+}
+
+.navigation {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+
+    .navigation__button {
+        padding: 0.5rem 2rem;
+
+        border: 0.5rem solid white;
+
+        font-size: 2rem;
+
+        color: var(--gm-light);
+        background-color: var(--gm-secondary);
+
+        transition: all 0.5s ease-in-out;
+
+        &:hover {
+            animation: navigation__button__flicker 0.5s ease-in-out infinite alternate;
+        }
+    }
+
+    .navigation__location {
+        padding: 0.5rem;
+
+        border-top: 0.5rem solid white;
+        border-bottom: 0.5rem solid white;
+        
+        display: block;
+
+        flex-grow: 1;
+
+        font-size: 2rem;
+        font-weight: bolder;
+
+        text-transform: uppercase;
+        text-align: center;
+
+        color: var(--gm-light);
+        background-color: var(--gm-primary);
+    }
+}
+
+@keyframes navigation__button__flicker {
+    from {
+        opacity: 1;
+    }  
+    to {
+        opacity: 0.8;
+    }
+}
+
+.tasks-container {
+}
+
+.tasks {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-gap: 0.5rem;
+    grid-template-rows: repeat(2, 1fr);
+    padding: 0.5rem;    
+}
+
+.task {
+    padding: 0.5rem;
+
+    position: relative;
+
+    flex-grow: 0;
+
+    display: flex;
+    flex-flow: column nowrap;
+
+    border-collapse: collapse;
+    border: 0.5rem solid var(--gm-secondary);
+    box-shadow: 0 0.5rem 0 -0.25rem var(--gm-secondary);
+
+    transition: all 0.5s ease-in-out;
+
+    &:hover {
+        transform: scale(1.05);   
+        
+        .task__number {
+            color: var(--gm-primary);
+
+            transform: scale(1.2);
+        }
+    }
+
+    &.task--empty {
+        border: 0.5rem solid var(--gm-primary);
+        box-shadow: 0 0.5rem 0 -0.25rem var(--gm-primary);
+        background-color: rgba(var(--gm-red), 0.9);
+    }
+
+    .task__photo {
+        width: 100%;
+        height: 100%;
+
+        background-color: var(--gm-primary);
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+
+    .task__number {
+        color: var(--gm-secondary);
+        text-align: center;
+
+        font-family: "Bebas Neue";
+        font-size: 6rem;
+    }
+
+    .task__name {
+        color: var(--gm-secondary);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .task__meta {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        gap: 1rem;
+
+        .task__meta__term {
+            color: var(--gm-primary);
+            font-weight: normal;
+
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    
+        .task__meta__module {
+            color: var(--gm-primary);
+            font-weight: normal;
+
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+}
+
+.tasks--activities, .tasks--quizzes, .tasks--exams {
+    display: none;
+}
+
+.footer {
+    .footer__divider {
+
+        margin: 1rem 0;
+        border: 0.5rem solid var(--gm-primary);
+    }
+
+    .footer__attribution {
+        text-align: center;
+        color: var(--gm-secondary);
+        margin-bottom: 1rem;
+    }
+}

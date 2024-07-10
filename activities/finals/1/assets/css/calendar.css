@@ -1,0 +1,76 @@
+/* CALENDAR */
+.calendar-container table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.calendar-container td {
+  padding: 0;
+}
+
+.calendar-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.calendar-container header {
+  text-align: center;
+  border-radius: 1em 1em 0 0;
+  background: #d63384;
+  color: #fff;
+  padding: 0.5em 0.2em;
+}
+
+.day {
+  font-size: 3em;
+  font-weight: 900;
+  line-height: 1em;
+}
+
+.month {
+  font-size: 2em;
+  line-height: 1em;
+}
+
+.calendar {
+  flex-grow: 1;
+  width: 100%;
+  background: #fff;
+  border-radius: 0 0 1em 1em;
+  -webkit-box-shadow: 0 2px 1px rgba(0, 0, 0, .2), 0 3px 1px #fff;
+  box-shadow: 0 2px 1px rgba(0, 0, 0, .2), 0 3px 1px #fff;
+  color: #555;
+  padding: 2em;
+}
+
+.calendar thead {
+  color: #d63384;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.calendar tr {
+  width: 100%;
+}
+
+.calendar td {
+  padding: .5em 1em;
+  text-align: center;
+}
+
+.calendar tbody td:hover {
+  background: #cacaca;
+  color: #fff;
+}
+
+.current-day {
+  color: #e66b6b;
+}
+
+.prev-month,
+.next-month {
+  color: #cacaca;
+}

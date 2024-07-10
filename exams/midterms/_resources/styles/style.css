@@ -1,0 +1,35 @@
+/* FOOTER */
+footer {
+    position: relative;
+    z-index: 1000;
+}
+
+/* HEADER */
+#header-container {
+    background: none;
+}
+
+#header-logo {
+    background-image: url("../../_global-resources/images/logo-white.svg");
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    color: var(--ivos-white);
+}
+
+#header-shop:hover {
+    border-color: var(--ivos-red);
+    color: var(--ivos-white);
+}
+
+#header-shop:before {
+    background: var(--ivos-red);
+}
+
+header nav > ul a:hover {
+    background-color: var(--ivos-white);
+    color: var(--ivos-black);
+}
+

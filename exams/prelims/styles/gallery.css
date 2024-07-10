@@ -1,0 +1,297 @@
+/* BANNER */
+.banner {
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    background-color: var(--color-pale-white);
+}
+
+.banner-container {
+    width: 100vw;
+
+    position: relative;
+    margin: auto;
+}
+
+.banner-image {
+    z-index: 25;
+    display: block;
+    margin: auto;
+    height: 160px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.banner-image:hover {
+    transform: scale(110%);
+}
+
+.banner-main {
+    z-index: 25;
+    display: block;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    font-family: "Monoton";
+    text-align: center;
+    font-size: 110pt;
+    color: var(--color-red);
+    transition: transform 0.5s ease-in-out;
+}
+
+.banner-main:hover {
+    transform: scale(110%);
+}
+
+.banner-tagline {
+    margin: 0;
+    padding: 0;
+
+    text-transform: uppercase;
+    letter-spacing: 1cap;
+    font-size: 16px;
+    text-align: center;
+}
+
+.banner-halftone {
+    mix-blend-mode: multiply;
+    z-index:0;
+    position: absolute;
+}
+
+.banner-halftone-left {
+    width: 600pt;
+    left: -350pt;
+    bottom: -75%;
+    animation: halftone-spin-left 36s linear infinite;
+}
+
+.banner-halftone-right-1 {
+    width: 350pt;
+    right: -100pt;
+    top: -150%;
+    animation: halftone-spin-right 50s linear infinite;
+}
+
+.banner-halftone-right-2 {
+    width: 500pt;
+    right: -50pt;
+    bottom: -200%;
+    animation: halftone-spin-right 100s linear infinite;
+}
+
+@keyframes halftone-spin-left {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes halftone-spin-right {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+/* CONTAINERS */
+.containers {
+    background-color: var(--color-red);
+}
+
+.container {
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.container-content {
+    width: 100%;
+}
+
+.container-accessories {
+    background-color: var(--color-red);
+}
+
+.accessories-main {
+    height: 100%;
+    position: absolute;
+    left: -80pt;
+
+    mix-blend-mode: color-dodge;
+    transition: filter 1s ease-in-out;
+}
+
+.accessories-main:hover {
+    mix-blend-mode: normal;
+}
+
+.tops-main {
+    width: 600pt;
+    position: absolute;
+    right: -80pt;
+
+    mix-blend-mode: color-dodge;
+    transition: mix-blend-mode 0.5s ease-in-out;
+}
+
+.tops-main:hover {
+    mix-blend-mode: normal;
+}
+
+.bottoms-main {
+    height: 100%;
+    position: absolute;
+    left: -400pt;
+
+    mix-blend-mode: color-dodge;
+    transition: filter 1s ease-in-out;
+}
+
+.bottoms-main:hover {
+    mix-blend-mode: normal;
+}
+
+.container-tops {
+    background-color: var(--color-blue);
+}
+
+.container-bottoms {
+    background-color: var(--color-green);
+}
+
+/* GALLERY */
+.gallery-type {
+    position: absolute;
+    letter-spacing: 3pt;
+    font-size: 128pt;
+    font-weight: 1000;
+    color: var(--color-pale-white);
+    mix-blend-mode: overlay;
+    opacity: 0.5;
+}
+
+.gallery-type-left {
+    left: 50pt;
+    bottom: -120pt;
+}
+
+.gallery-type-right {
+    right: 50pt;
+    bottom: -120pt;
+}
+
+.gallery-right {
+    margin-top: -150pt;
+    position: absolute;
+    max-width: 50%;
+    right: 16px;
+}
+
+.gallery-left {
+    margin-top: -150pt;
+    position: absolute;
+    max-width: 50%;
+    left: 16px;
+}
+
+.gallery-photo {
+    border-radius: 16pt;
+    object-fit: cover;
+    height: 200px;
+    width: 150px;
+    transition-property: transform, filter;
+    transition: 0.5s ease-in-out;
+}
+
+.fa-star {
+    transition: color 0.5s ease-in-out  ;
+}
+
+.fa-star:hover {
+    color: var(--color-yellow);
+}
+
+.gallery-photo:hover {
+    transform: scale(110%) rotate(2.5deg);
+    filter: hue-rotate(5deg) saturate(110%) brightness(110%);
+}
+
+.gallery-item strong {
+    color: var(--color-yellow);
+}
+
+.gallery-item {
+    float:left;
+    color: var(--color-pale-white);
+
+    height: 200px;
+    width: 150px;
+    position: relative;
+    margin: 20pt 5pt;
+    width: fit-content; 
+    border-radius: 16pt;
+}
+
+.product-left {
+    margin: 0;
+    padding: 0;
+    float: left;
+}
+
+.product-right {
+    margin: 0;
+    padding: 0;
+    float: right;
+}
+
+.gallery-description {
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-photo:hover {
+    background-color: unset;
+}
+
+.accessories-product-name:hover, .tops-product-name:hover, .bottoms-product-name:hover {
+    background-color: unset;
+    
+}
+
+.accessories-product-name strong, .tops-product-name strong, .bottoms-product-name strong {
+    border-radius: 2pt;
+    
+    transition-property: padding, color, background-color;
+    transition: 0.5s ease-in-out;
+}
+
+.accessories-product-name:hover strong {
+    padding: 0 5pt;
+    color: var(--color-red);
+    background-color: var(--color-yellow);
+}
+
+.tops-product-name:hover strong {
+    padding: 0 5pt;
+    color: var(--color-blue);
+    background-color: var(--color-yellow);
+}
+
+.bottoms-product-name:hover strong {
+    padding: 0 5pt;
+    color: var(--color-green);
+    background-color: var(--color-yellow);
+}

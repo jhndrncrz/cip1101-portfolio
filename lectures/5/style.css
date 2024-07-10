@@ -1,0 +1,142 @@
+.parallax svg {
+    z-index: -1;
+    position: absolute;
+}
+
+#blob1 {
+    height: 250px;
+    top: 25px;
+    fill:yellow;
+    animation: animation1 10s ease-in-out 0s infinite alternate;
+}
+
+#blob2 {
+    height: 500px;
+    bottom: -200px;
+    right: 750px;
+    fill:gold;
+    animation: animation2 25s linear 0s infinite alternate-reverse ;
+}
+
+#blob3 {
+    height: 800px;
+    bottom: -200px;
+    right: -300px;
+    fill:darkmagenta;
+    animation: animation3 15s ease-in-out 0s infinite alternate;
+}
+
+#blob4 {
+    height: 800px;
+    top: -400px;
+    left: -300px;
+    fill:blueviolet;
+    animation: animation4 60s ease-in 0s infinite alternate-reverse;
+}
+
+#blob5 {
+    height: 2000px;
+    fill: darkorange;
+    animation: animation3 60s ease-in 0s infinite alternate-reverse;
+}
+
+/* MAIN */
+main {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    background-color: orange;
+    text-align: center;
+    padding: 25%;
+    gap: 1em;
+}
+
+main h1 span:hover {
+    color:blueviolet;
+}
+
+main p span:hover {
+    font-weight: 600;
+    color:blueviolet;
+}
+
+main h1 {
+    color:crimson;
+    font-size: 4rem;
+    font-weight: 600;
+}
+
+main p {
+    color: white;
+}
+
+/* SLIDE 1 */
+#slide-1 {
+    background-color:tomato;
+}
+
+@keyframes animation1 {
+    from {
+        transform:  rotate(0deg);
+    }
+
+    to {
+        transform:  rotate(360deg);
+    }
+}
+
+@keyframes animation2 {
+    from {
+        transform:  rotate(0deg);
+    }
+
+    to {
+        transform: scale(1.2) rotate(125deg);
+    }
+}
+
+@keyframes animation3 {
+    0% {
+        transform:  rotate(0deg);
+    }
+
+    25% {
+        transform:  scale(1.5) rotate(180deg);
+    }
+
+    40% {
+        transform:  rotate(60deg);
+    }
+
+    80% {
+        transform:  scale(0.8) rotate(-20deg);
+    }
+
+    100% {
+        transform:  rotate(50deg);
+    }
+}
+
+
+@keyframes animation4 {
+    0% {
+        transform:  rotate(0deg);
+    }
+
+    60% {
+        transform:  scale(0.5) rotate(90deg);
+    }
+
+    70% {
+        transform:  scale(2.0) rotate(80deg);
+    }
+
+    85% {
+        transform:  scale(1.5) rotate(360deg);
+    }
+
+    100% {
+        transform:  rotate(20deg);
+    }
+}

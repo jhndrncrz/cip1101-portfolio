@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CIP1101 - Handson Quiz - Forms</title>
+
+    <style>
+        .header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        body {
+            padding: 16px;
+        }
+        fieldset {
+            margin: 16px 0;
+            padding: 16px;
+        }
+        label {
+            padding-right: 8px;
+        }
+        td > label {
+            padding-right: 0;
+        }
+        table {
+            width: 100%;
+        }
+        td {
+            text-align: center;    
+        }
+        td > input {
+            width: 100%
+        }
+    </style>
+</head>
+<body>
+    <form action="get">
+        <div class="header">
+            <h2>Sample University</h2>    
+            <h3>Enrollment System</h3>
+            <h1>Personal Data Sheet</h1>
+            <h3>(Graduate School, Law, Medicine)</h3>
+        </div>
+
+        <label for="program">Program:</label><input type="text" name="program" id="program"><br>
+
+        <label for="student-number">Student Number:</label><input type="text" name="student-number" id="student-number"><br>
+        <table>
+            <tr>
+                <td>
+                    <input type="text" name="last-name" id="last-name">
+                </td>
+                <td>
+                    <input type="text" name="first-name" id="first-name">
+                </td>
+                <td>
+                    <input type="text" name="middle-name" id="middle-name">
+                </td>
+            </tr>
+            <tr>
+                <td><label for="last-name">Last Name</label></td>
+                <td><label for="first-name">Given Name</label></td>
+                <td><label for="middle-name">Middle Name</label></td>
+            </tr>
+        </table>
+
+        <fieldset>
+            <legend>Student Details</legend>
+            <label for="region">Region:</label><select name="region" id="region">
+                <option value="ncr">NCR</option>
+            </select><br>
+            <label for="city-address">City Address:</label><input type="text" name="city-address" id="city-address">
+            <label for="zip-code">ZIP Code:</label><input type="text" name="zip-code" id="zip-code" maxlength="4" size="4"><br>
+            <label for="home-address">Home Address:</label><input type="text" name="home-address" id="home-address">
+            <label for="zip-code">ZIP Code:</label><input type="text" name="zip-code" id="zip-code" maxlength="4" size="4"><br>
+            
+            <br>
+
+            <label for="telephone-number">Telephone Number:</label><input type="tel" name="telephone-number" id="telephone-number"><br>
+            <label for="email-address">Email Address:</label><input type="email" name="email-address" id="email-address"><br>
+
+            <br>
+
+            <label for="age">Age:</label><input type="number" name="age" id="age"><br>
+            <label for="sex">Sex:</label><select name="" id="">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="intersex">Intersex</option>
+                <option value="others">Others</option>
+            </select><br>
+            <label for="birthday">Birthday:</label><input type="date" name="birthday" id="birthday"><br>
+            <label for="birthplace">Birthplace:</label><input type="text" name="birthplace" id="birthplace"><br>
+            <label for="citizenship">Citizenship:</label><select name="citizenship" id="citizenship">\
+                <option value="Filipino">Filipino</option>
+            </select><br>
+            <label for="acr">ACR Number:</label><input type="text" name="acr" id="acr"><br>
+            <label for="religion">Religion</label><input type="text" name="religion" id="religion"><br>
+            
+            <br>
+
+            <fieldset>
+                <legend>Legal Status</legend>
+                <input type="radio" name="legal-status" id="legal-status-1"><label for="legal-status-1">Citizen of RP</label><br>
+                <input type="radio" name="legal-status" id="legal-status-2"><label for="legal-status-2">Permanent Resident</label><br>
+                <input type="radio" name="legal-status" id="legal-status-3"><label for="legal-status-3">Person granted permission to enter and remain as a student in RP on a visa for a defined period of time</label><br>
+                <input type="radio" name="legal-status" id="legal-status-4"><label for="legal-status-4">Person granted permission to enter and remain as a child or spouse of a worker on a visa for a defined period of time</label><br>
+                <input type="radio" name="legal-status" id="legal-status-5"><label for="legal-status-5">Other visa</label><br>
+                <input type="radio" name="legal-status" id="legal-status-6"><label for="legal-status-6">Legal status not known</label><br>
+            </fieldset>
+
+            <fieldset>
+                <legend>Civil Status</legend>
+                <input type="radio" name="civil-status" id="civil-status-1"><label for="civil-status-1">Single</label><br>
+                <input type="radio" name="civil-status" id="civil-status-2"><label for="civil-status-2">Married</label><br>
+                <input type="radio" name="civil-status" id="civil-status-3"><label for="civil-status-3">Divorced</label><br>
+                <input type="radio" name="civil-status" id="civil-status-4"><label for="civil-status-4">Widowed</label><br>
+                <input type="radio" name="civil-status" id="civil-status-5"><label for="civil-status-5">Separated</label><br>
+            </fieldset>
+
+            <fieldset>
+                <legend>Employment Status</legend>
+                <input type="radio" name="working-status" id="working-status-1"><label for="working-status-1">Working</label><br>
+                <input type="radio" name="working-status" id="working-status-2"><label for="working-status-2">Not Working</label><br>
+                <label for="office-contact">If working, Office Contact Details:</label><input type="text" name="office-contact" id="office-contact"><br>
+            </fieldset>
+        </fieldset>
+
+        <fieldset>
+            <legend>Parents' Details</legend>
+            <fieldset>
+                <legend>Father's Information</legend>
+                <table>
+                    <tr>
+                        <td>
+                            <input type="text" name="father-last-name" id="father-last-name">
+                        </td>
+                        <td>
+                            <input type="text" name="father-first-name" id="father-first-name">
+                        </td>
+                        <td>
+                            <input type="text" name="father-middle-name" id="father-middle-name">
+                        </td>
+                        <td>
+                            <input type="text" name="father-auxiliary-name" id="father-auxiliary-name">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="father-last-name">Last Name</label></td>
+                        <td><label for="father-first-name">Given Name</label></td>
+                        <td><label for="father-middle-name">Middle Name</label></td>
+                        <td><label for="father-auxiliary-name">Auxiliary Name</label></td>
+                    </tr>
+                </table>
+                <label for="father-employment-status">Employment Status:</label><select name="father-employment-status" id="father-employment-status">
+                    <option value="self-employed">Self-employed</option>
+                    <option value="full-time">Full Time</option>
+                    <option value="part-time">Part Time</option>
+                    <option value="unemployed">Unemployed</option>
+                </select><br>
+                <label for="telephone-number">Telephone Number:</label><input type="tel" name="telephone-number" id="telephone-number"><br>
+            </fieldset>
+            <fieldset>
+                <legend>Mother's Information</legend>
+                <table>
+                    <tr>
+                        <td>
+                            <input type="text" name="mother-last-name" id="mother-last-name">
+                        </td>
+                        <td>
+                            <input type="text" name="mother-first-name" id="mother-first-name">
+                        </td>
+                        <td>
+                            <input type="text" name="mother-middle-name" id="mother-middle-name">
+                        </td>
+                        <td>
+                            <input type="text" name="mother-auxiliary-name" id="mother-auxiliary-name">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="mother-last-name">Last Name</label></td>
+                        <td><label for="mother-first-name">Given Name</label></td>
+                        <td><label for="mother-middle-name">Middle Name</label></td>
+                        <td><label for="mother-auxiliary-name">Auxiliary Name</label></td>
+                    </tr>
+                </table>
+                <label for="mother-employment-status">Employment Status:</label><select name="mother-employment-status" id="mother-employment-status">
+                    <option value="self-employed">Self-employed</option>
+                    <option value="full-time">Full Time</option>
+                    <option value="part-time">Part Time</option>
+                    <option value="unemployed">Unemployed</option>
+                </select><br>
+                <label for="telephone-number">Telephone Number:</label><input type="tel" name="telephone-number" id="telephone-number"><br>
+            </fieldset>
+            <label for="parents-home-address">Parents' Home Address:</label><input type="text" name="parents-city-address" id="parents-city-address">
+            <label for="parents-zip-code">Parents' ZIP Code:</label><input type="text" name="parents-zip-code" id="parents-zip-code" maxlength="4" size="4"><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Guardian's Details</legend>
+            <fieldset>
+                <legend>Guardian's Information</legend>
+                <table>
+                    <tr>
+                        <td>
+                            <input type="text" name="guardian-last-name" id="guardian-last-name">
+                        </td>
+                        <td>
+                            <input type="text" name="guardian-first-name" id="guardian-first-name">
+                        </td>
+                        <td>
+                            <input type="text" name="guardian-middle-name" id="guardian-middle-name">
+                        </td>
+                        <td>
+                            <input type="text" name="guardian-auxiliary-name" id="guardian-auxiliary-name">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="guardian-last-name">Last Name</label></td>
+                        <td><label for="guardian-first-name">Given Name</label></td>
+                        <td><label for="guardian-middle-name">Middle Name</label></td>
+                        <td><label for="guardian-auxiliary-name">Auxiliary Name</label></td>
+                    </tr>
+                </table>
+                <label for="guardian-employment-status">Employment Status:</label><select name="guardian-employment-status" id="guardian-employment-status">
+                    <option value="self-employed">Self-employed</option>
+                    <option value="full-time">Full Time</option>
+                    <option value="part-time">Part Time</option>
+                    <option value="unemployed">Unemployed</option>
+                </select><br>
+                <label for="telephone-number">Telephone Number:</label><input type="tel" name="telephone-number" id="telephone-number"><br>
+                <label for="guardian-home-address">Guardian's Home Address:</label><input type="text" name="guardian-city-address" id="guardian-city-address">
+                <label for="guardian-zip-code">Guardian's ZIP Code:</label><input type="text" name="guardian-zip-code" id="guardian-zip-code" maxlength="4" size="4"><br>
+            </fieldset>
+        </fieldset>
+    </form>
+
+    <div>
+        <hr>
+        <p>Submitted by:</p>
+        <h1>CIP1101</h1>
+        <h2>Handson Quiz - Forms</h2>
+        <h3>Cruz, John Adrian B. | CSAD</h3>
+    </div>
+</body>
+</html>

@@ -1,0 +1,163 @@
+@font-face {
+    font-family: dancing-script;
+    src: url(dancing-script.woff);
+}
+
+@font-face {
+    font-family: script1-script-casual;
+    src: url("script1-script-casual.woff");
+}
+
+body {
+    min-width: 600px;
+    width: 80%;
+    margin: auto;
+}
+/*Text*/
+h2 {
+    margin: 0;
+    padding: 5pt;
+    font-family: script1-script-casual, sans-serif;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+}
+h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #e4001b;
+}
+p, li {
+    font-family: Arial, Helvetica, sans-serif;
+}
+code {
+    font-size: 16px;
+}
+
+/* Side-by-Side */
+.two-column {
+    display: flex;
+}
+.side-a {
+    flex: 2;
+}
+.side-b {
+    flex: 1;
+}
+
+/* Banner */
+.banner {
+    height: 350pt;
+    margin: 10pt;
+
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e4001b;
+}
+
+.banner-photo {
+    position: absolute;
+    height: 100%;
+    left: 0pt;
+}
+
+.banner-logo {
+    position: absolute;
+    width: 60%;
+}
+
+/* Footer */
+.copyright {
+    text-align: center;
+}
+/* Sections */
+.section {
+    margin: 10pt;
+
+    border: 3pt solid #014a95;
+    box-shadow: 5pt 5pt #014a95;
+}
+
+.section-header {
+    width: 100%;
+    margin: 0;
+    
+    background-color: #014a95;
+}   
+
+.section-body {
+    padding: 0 10pt;
+}
+
+/* Entry */
+.entry {
+    margin: 10pt;
+
+    border: 3pt solid #014a95;
+    box-shadow: 5pt 5pt #014a95;
+}
+
+.entry-header {
+    padding: 0 10pt;
+}
+
+.entry-header-line {
+    display: flex;
+}
+.entry-title, .entry-date {
+    margin: 0;
+    margin-top: revert;
+}
+.entry-place, .entry-aux {
+    margin: 0;
+    margin-bottom: revert;
+}
+
+.entry-title, .entry-place {
+    flex: 3;
+    text-align: left;
+}
+.entry-date, .entry-aux {
+    flex: 1;
+    text-align: right;
+}
+
+.entry-title, .entry-date, .entry-place, .entry-aux {
+    margin-bottom: 0;
+    font-size: 16px;
+}
+
+.entry-body {
+    padding: 0 10pt;
+}
+
+.entry-aux {
+    font-style: italic;
+}
+
+/* Anchors */
+a {
+    text-decoration: none;
+}
+a:link {
+    color: #014a95;
+}
+a:hover {
+    color: #014a95;
+    text-decoration: underline;
+}
+a:visited {
+    color: #e4001b;
+}
+a:active {
+    color: white;
+    background-color: #014a95;
+}
+
+hr {
+    margin-top: 30px;
+    border: 0;
+    border-top: 3pt dotted #014a95;
+}

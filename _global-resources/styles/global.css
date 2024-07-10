@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --gm-blue: 1, 74, 149;
+    --gm-red: 228, 0, 27;
+    --gm-white: 255, 255, 255;
+    --gm-black: 0, 0, 0;
+
+    --gm-primary: rgb(var(--gm-red));
+    --gm-secondary: rgb(var(--gm-blue));
+    --gm-light: rgb(var(--gm-white));
+    --gm-dark: rgb(var(--gm-black));
+}
+
+@font-face {
+    font-family: gm-script;
+    src: url("../fonts/dancing-script.woff");
+}
+
+@font-face {
+    font-family: gm-brush;
+    src: url("../fonts/script1-script-casual.woff");
+}

@@ -1,0 +1,411 @@
+.parallax svg {
+  z-index: -1;
+  position: absolute;
+}
+
+#blob6 {
+  height: 1200px;
+  top: 500px;
+  right: 400px;
+  fill: darkpurple;
+  animation: animation1 30s ease-in-out 0s infinite alternate-reverse;
+}
+
+#blob7 {
+  height: 1000px;
+  bottom: 500px;
+  left: 40px;
+  fill: purple;
+  animation: animation2 20s ease-in-out 0s infinite alternate-reverse;
+}
+
+#blob8 {
+  height: 700px;
+  bottom: -120px;
+  right: 200px;
+  fill: rebeccapurple;
+  animation: animation3 15s ease-in-out 0s infinite alternate-reverse;
+}
+
+#blob9 {
+  height: 500px;
+  bottom: 250px;
+  left: 40px;
+  fill: purple;
+  animation: animation4 10s ease-in-out 0s infinite alternate-reverse;
+}
+
+#blob10 {
+  height: 500px;
+  bottom: 500px;
+  right: 40px;
+  fill: magenta;
+  animation: animation4 30s ease-in-out 0s infinite alternate-reverse;
+}
+
+#blob1 {
+  height: 600px;
+  top: 50px;
+  right: 100px;
+  fill: purple;
+  animation: animation2 20s ease-in-out 0s infinite alternate-reverse;
+}
+
+#blob2 {
+  height: 500px;
+  bottom: -150px;
+  right: 10px;
+  fill: orchid;
+  animation: animation3 55s linear 0s infinite alternate-reverse;
+}
+
+#blob3 {
+  height: 1000px;
+  bottom: -200px;
+  right: -500px;
+  fill: purple;
+  animation: animation4 30s ease-out 0s infinite alternate;
+}
+
+#blob4 {
+  height: 1500px;
+  fill: mediumvioletred;
+  animation: animation1 60s ease-in 0s infinite alternate-reverse;
+}
+
+#blob5 {
+  height: 800px;
+  top: -400px;
+  left: -300px;
+  fill: magenta;
+  animation: animation3 50s ease-in-out 0s infinite alternate-reverse;
+}
+
+/* MAIN */
+main {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  background-color: deeppink;
+}
+
+main h1 span:hover {
+  color: blueviolet;
+}
+
+main p span:hover {
+  font-weight: 600;
+  color: blueviolet;
+}
+
+main h1 {
+  color: darkblue;
+  font-size: 4rem;
+  font-weight: 600;
+}
+
+main p {
+  color: white;
+}
+
+
+/* SLIDE 1 */
+#slide-1 {
+  background-color: tomato;
+}
+
+@keyframes animation1 {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: translateX(125px) rotate(360deg);
+  }
+}
+
+@keyframes animation2 {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: scale(1.2) rotate(125deg);
+  }
+}
+
+@keyframes animation3 {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: translateY(-250px) scale(1.5) rotate(180deg);
+  }
+
+  40% {
+    transform: rotate(60deg);
+  }
+
+  80% {
+    transform: translateX(500px) scale(0.8) rotate(-20deg);
+  }
+
+  100% {
+    transform: rotate(50deg);
+  }
+}
+
+
+@keyframes animation4 {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  60% {
+    transform: translateX(200px) scale(0.75) rotate(90deg);
+  }
+
+  70% {
+    transform: translateX(-200px) scale(1.5) rotate(100deg);
+  }
+
+  85% {
+    transform: translateY(-500px) scale(1) rotate(150deg);
+  }
+
+  100% {
+    transform: rotate(20deg);
+  }
+}
+
+#sign-in-container {
+  display: flex;
+  width: 50%;
+  flex-flow: column nowrap;
+  gap: 1em;
+}
+
+input[type="email"]::placeholder,
+input[type="password"]::placeholder {
+  color: #FFFFFF11;
+}
+
+input[type="email"],
+input[type="password"] {
+  color: white;
+  padding: 0.5em 1em;
+  border-radius: 10px;
+  background-color: #FFFFFF11;
+  backdrop-filter: blur(10px);
+  transition: all 0.5s ease-in-out;
+}
+
+input:focus {
+  border: 5px solid white;
+}
+
+input[type="checkbox"] {
+  height: 1em;
+  width: 1em;
+  background-color: white;
+  border-radius: 5px;
+  transition: all 0.25s ease-in-out;
+}
+
+input[type="checkbox"]:checked {
+  background-color: blue;
+}
+
+#remember-me-container {
+  color: white;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 0.5em;
+}
+
+#sign-in-aux-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+#sign-in-aux-container a {
+  color: white;
+  transition: all 0.5s ease-in-out;
+}
+
+#sign-in-aux-container a:hover {
+  color: darkblue;
+  font-weight: 600;
+}
+
+#explanation {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 25%;
+  gap: 1em;
+  background-color: crimson;
+}
+
+#explanation h1 span:hover {
+  color: red;
+}
+
+#explanation p span:hover {
+  font-weight: 600;
+  color: tomato;
+}
+
+#explanation h1 {
+  color: tomato;
+  font-size: 4rem;
+  font-weight: 600;
+}
+
+#explanation p {
+  color: white;
+}
+
+.card button {
+  margin-top: 0.75em;
+  color: white;
+  background-color: darkmagenta;
+  border-radius: 10px;
+  box-shadow: 0px 10px 0px 0px purple;
+  border: 5px solid purple;
+  padding: 0.5em;
+  transition: all 0.5s ease-in-out;
+}
+
+.card button:hover {
+  background-color: mediumvioletred;
+  font-weight: 600;
+}
+
+.focused-card button {
+  color: white;
+  background-color: darkorange;
+  border-radius: 10px;
+  box-shadow: 0px 10px 0px 0px orange;
+  border: 5px solid orange;
+  padding: 0.5em;
+  transition: all 0.5s ease-in-out;
+}
+
+.focused-card button:hover {
+  background-color: purple;
+  font-weight: 600;
+}
+
+#cards-container {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 2em;
+}
+
+.card {
+  color: white;
+  width: 15em;
+  border-radius: 20px;
+  background-color: #FFFFFF33;
+  backdrop-filter: blur(20px);
+}
+
+.card-price {
+  text-align: center;
+  white-space: nowrap;
+}
+
+.card-price .amount {
+  color: orange;
+  display: inline-block;
+  font-weight: 600;
+  text-align: center;
+  font-size: 2em;
+   -webkit-text-stroke: 5px orangered;
+  text-shadow: 0 5px orangered;
+  paint-order: stroke fill;
+  transition: all 0.5s ease-in-out
+}
+
+.card-price .amount:hover {
+  transform: scale(1.25) rotate(-5deg);
+  color: orange;
+}
+
+.card-price span {
+  font-weight: normal;
+  font-size: 1em;
+}
+
+.card-header {
+  padding: 0.5em;
+  font-size: 1.5em;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  border-radius: 20px 20px 0 0;
+  background-color: orange;
+}
+
+.card-body {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+}
+.card-body hr {
+  width: 100%;
+  border: 1px solid white;
+  margin: 1em;
+}
+.card-body ul {
+  width: 100%;
+  display:flex;
+  flex-flow: column nowrap;
+  gap: 0.5em;
+}
+
+.card-body ul li {
+  width: 100%;
+}
+
+.fa-check {
+  -webkit-text-stroke: 2px gold;
+  color: gold;
+}
+
+.fa-x {
+  -webkit-text-stroke: 2px orangered;
+  color: orangered;
+}
+
+.fa-check, .fa-x {
+  width: 1em;
+}
+
+.focused-card {
+  transform: scale(1.2);
+}
+
+.focused-card .card-header {
+  background-color: purple;
+}
+
+
+.tag {
+  font-size: 0.5em;
+  font-weight: normal;
+  font-style: italic;
+}
+
+del {
+  text-decoration: line-through;
+}

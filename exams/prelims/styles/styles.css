@@ -1,0 +1,241 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Monoton&family=Pacifico&family=Protest+Riot&family=Teko:wght@300..700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap");
+
+:root {
+    --color-red: #EE3B3A;
+    --color-orange: #EE572D;
+    --color-yellow: #FECF1F;
+    --color-green: #347E7B;
+    --color-blue: #2E4662;
+    --color-brown: #774938;
+    --color-pale-white: #F4E5D5;
+    --color-dark-white: #E0BFA2;
+    --color-white: #FFFFFF;
+    --color-black: #000000;
+}
+
+/* GENERAL */
+body {
+    margin: 0;
+    
+    font-family: "Fredoka";
+    font-size: 12pt;
+}
+
+strong {
+    color: var(--color-red);
+}
+
+/* ANCHORS */
+a {
+    color: var(--color-red);
+
+    text-decoration: none;
+}
+
+a:active {
+    color: var(--color-orange);
+}
+
+a:hover {
+    color: var(--color-white);
+    background-color: var(--color-red);
+}
+
+/* NAVBAR */
+.navbar {
+    z-index: 100;
+    padding: 10pt;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+
+    position: sticky;
+    top: 0;
+}
+
+.navbar-list {
+    margin: 5pt;
+    padding: 0 20pt;
+
+    display: inline-block;
+    flex-grow: 1;
+
+    background-color: var(--color-pale-white);
+
+    border-radius: 16pt;
+    overflow: hidden;
+
+    list-style-type: none;
+}
+
+.navbar-logo {
+    display: block;
+    height: 32pt;
+
+    transition: transform .7s ease-in-out;
+}
+
+.navbar-logo:hover {
+    transform: rotate(360deg);
+}
+
+.navbar-logo-anchor {
+    color: unset;
+}
+
+.navbar-logo-anchor:hover {
+    color: unset;
+    background-color: unset;
+}
+
+.navbar-list-item {
+    margin: 5pt 0;
+    padding: 0 10pt;
+
+    float: right;
+}
+
+.navbar-list li:first-of-type {
+    margin: 5pt 0;
+    padding-left: 10pt;
+    padding-right: 0;
+
+    float: right;
+}
+
+.navbar-list-anchor {
+    padding: 2pt;
+    color: var(--color-red);
+
+    border-radius: 2pt;
+
+    text-decoration: none;
+    transition-property: color, background-color;
+    transition: 0.25s ease-in-out;
+}
+
+.navbar-list-anchor:hover {
+    color: var(--color-white);
+    background-color: var(--color-red);
+}
+
+/* DARK NAVBAR */
+.dark-navbar {
+    z-index: 100;
+    padding: 10pt;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+
+    position: sticky;
+    top: 0;
+}
+
+.dark-navbar-list {
+    margin: 5pt;
+    padding: 0 20pt;
+
+    display: inline-block;
+    flex-grow: 1;
+
+    background-color: var(--color-red);
+
+    border-radius: 16pt;
+    overflow: hidden;
+
+    list-style-type: none;
+}
+
+.dark-navbar-logo {
+    display: block;
+    height: 32pt;
+
+    transition: transform .7s ease-in-out;
+}
+
+.dark-navbar-logo:hover {
+    transform: rotate(360deg);
+}
+
+.dark-navbar-logo-anchor {
+    color: unset;
+}
+
+.dark-navbar-logo-anchor:hover {
+    color: unset;
+    background-color: unset;
+}
+
+.dark-navbar-list-item {
+    margin: 5pt 0;
+    padding: 0 10pt;
+
+    float: right;
+}
+
+.dark-navbar-list li:first-of-type {
+    margin: 5pt 0;
+    padding-left: 10pt;
+    padding-right: 0;
+
+    float: right;
+}
+
+.dark-navbar-list-anchor {
+    padding: 2pt;
+    color: var(--color-white);
+
+    border-radius: 2pt;
+
+    text-decoration: none;
+    transition-property: color, background-color;
+    transition: 0.25s ease-in-out;
+}
+
+.dark-navbar-list-anchor:hover {
+    color: var(--color-red);
+    background-color: var(--color-white);
+}
+
+/* FOOTER */
+.footer {
+    padding: 10pt;
+    background-color: var(--color-pale-white);
+    text-align: center;
+}
+
+/* FOOTER */
+.dark-footer {
+    padding: 10pt;
+    color: var(--color-white);
+    background-color: var(--color-red);
+    text-align: center;
+}
+
+/* PARALLAX */
+.parallax {
+    perspective: 1px;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.parallax-layer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.parallax-layer-base {
+    transform: translateZ(0);
+}
+
+.parallax-layer-back {
+    transform: translateZ(-1px) scale(2);
+}

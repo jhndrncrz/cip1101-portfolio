@@ -1,0 +1,157 @@
+/* DESCRIPTION */
+.thank-you {
+    height: 100vh;
+
+    position: relative;
+
+    background-color: var(--color-pale-white);
+}
+
+
+.product-container {
+    overflow: hidden;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.actual-image {
+    margin: 20pt;
+    border-radius: 20pt;
+    object-fit: cover;
+    height: 400pt;
+    width: 300pt;
+    transition: transform 0.5s ease-in-out 
+}
+
+.actual-image:hover {
+    transform: scale(110%);
+}
+
+.product-content {
+    width: 300pt;
+    margin-top: 0;
+}
+
+.product-line1 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-name {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    transition: color 0.5s ease-in-out;
+}
+
+.product-name:hover {
+    color: var(--color-red);
+}
+
+.product-code {
+    min-width: max-content;
+    opacity: 0.5;
+    margin: 0;
+    margin-top: auto;
+    padding: 0;
+    display: inline-block;
+}
+
+.product-price {
+    margin: 0;
+    padding: 0;
+    font-size: 36pt;
+}
+
+.product-price strong {
+    color: var(--color-red);
+}
+
+.product-rating {
+    padding-right: 5pt;
+}
+
+.reviews-number {
+    padding-left: 5pt;
+}
+
+.fa-star {
+    color: var(--color-red);
+    transition: color 0.5s ease-in-out;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid var(--color-dark-white);
+}
+
+.fa-star:hover {
+    color: var(--color-yellow)
+}
+
+.breadcrumbs {
+    margin-left: 20pt;
+}
+
+h2 {
+    display: inline-block;
+    line-height: 1;
+    margin: 0; 
+    padding: 0;
+    padding-right: 10pt;
+}
+
+.size {
+    font-weight: 900;
+    color: var(--color-pale-white);
+    background-color: var(--color-red);
+    padding: 0 10pt;
+    border-radius: 12pt;
+    transition-property: color, background-color;
+    transition: 0.5s ease-in-out
+}
+
+.size:hover {
+    color: var(--color-red);
+    background-color: var(--color-pale-white);
+}
+
+.add-to-cart {
+    margin-top: 20pt;
+    text-align: center;
+}
+
+.atc-button {
+    border: 3pt solid var(--color-orange);
+    padding: 5pt 30pt;
+    font-size: 32pt;
+    border-radius: 8pt;
+    text-align: center;
+    width: 100%;
+    color: var(--color-orange);
+    background-color: var(--color-pale-white);
+    transition-property: color, background-color;
+    transition: 0.5s ease-in-out;
+
+}
+
+.atc-button:hover {
+    color: var(--color-pale-white);
+    background-color: var(--color-orange);
+}
+
+.description-list {
+    margin: 0;
+    padding: 0;
+    margin-left: 25pt;
+}
+
+.color1 {
+    color: #d6a867;
+}
+
+.color2 {
+    color: #744809;
+}

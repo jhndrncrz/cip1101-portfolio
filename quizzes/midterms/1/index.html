@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cruz, John Adrian B. | CIP1101 - Midterm Handson Quiz 1 | Forms</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Source Sans Pro", "Helvetica Neue", Arial, Helvetica, sans-serif;
+        }
+
+        input {
+            height: 16px;
+            font-family: "Source Sans Pro", "Helvetica Neue", Arial, Helvetica, sans-serif;
+        }
+
+        .container {
+            padding: 64px 0;
+            width: 100%;
+
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            align-items: center;
+            justify-content: center;
+                
+            background-color: #BA0001;
+        }
+
+        .form-container {
+            padding: 32px;
+            width: 80%;
+
+            display: flex;
+            flex-direction: column;
+
+            background-color: white;
+            border-radius: 16px;
+        }
+
+        .form-group {
+            width: 80%;
+
+            background-color: white;
+            border-radius: 16px;
+        }
+
+        .form-group-header {
+            color: #BA0001;
+            padding: 16px;
+            border-bottom: 2px solid #BA0001;
+        }
+
+        .form-group-body {
+            padding: 32px;
+
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .form-entry {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-entry-horizontal {
+            display: flex;
+            align-items: stretch;
+            flex-direction: row;
+            gap: 16px;
+        }
+
+        .form-entry-horizontal > div {
+            flex: 1;
+        }
+
+        .form-group-subcategory {
+            display: flex; 
+            flex-direction: column; 
+            gap: 16px;
+        }
+
+        h1, h2, h3, h4, h5, h6, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        input, select {
+            outline: 0;
+            padding: 8px;
+            border: 2px solid black;
+            border-radius: 8px;
+            transition: border .10s ease-in-out;
+        }
+
+        input:focus, select:focus {
+            border: 4px solid #BA0001;
+        }
+
+        .shadow {
+            box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
+        }
+
+        button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 24px;
+            padding: 32px;
+            height: 32px;
+            width: 80%;
+
+            background-color: white;
+            border: none;
+            border-radius: 16px;
+
+            transition-property: border, color, background-color;
+            transition: .25s ease-in-out;
+        }
+
+        button:hover {
+            color: white;
+            background-color: #BA0001;
+            border: 4px solid white;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        h1 {
+            color: white;
+            font-size: 48px;
+        }
+
+        .header p {
+            font-size: 24px;
+            color: white;
+        }
+        
+        .required {
+            color: #BA0001;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <form method="post" action="">
+        <div class="container">
+            <div class="header">
+                <p>University of the East</p>
+                <p>Enrollment System</p>
+                <h1>Personal Data Sheet</h1>
+            </div>
+
+            <div class="form-group shadow">
+                <div class="form-group-header">
+                    <h2><i class="fa-solid fa-circle-info"></i> Basic Info</h2>
+                </div>
+    
+                <div class="form-group-body">
+                    <div class="form-entry">
+                        <label for="program">Student Number <span class="required">*</span></label>
+                        <input required id="program" type="text" placeholder="20241234567" pattern="[\d]{11}">
+                    </div>
+
+                    <div class="form-entry-horizontal">
+                        <div class="form-entry">
+                            <label for="last-name">Last Name <span class="required">*</span></label>
+                            <input required type="text" name="last-name" id="last-name" placeholder="Dela Cruz">
+                        </div>
+                        <div class="form-entry">
+                            <label for="first-name">First Name <span class="required">*</span></label>
+                            <input required type="text" name="first-name" id="first-name" placeholder="Juan">
+                        </div>
+                        <div class="form-entry">
+                            <label for="middle-name">Middle Name <span class="required">*</span></label>
+                            <input required type="text" name="middle-name" id="middle-name" placeholder="Perez">
+                        </div>
+                        <div class="form-entry" style="flex-grow: 0.25;">
+                            <label for="auxiliary-name">Auxiliary Name</label>
+                            <input type="text" name="auxiliary-name" id="auxiliary-name" placeholder="Jr.">
+                        </div>
+                    </div>
+                
+                    <div class="form-entry">
+                        <label for="program">Program <span class="required">*</span></label>
+                        <input required id="program" type="text" placeholder="BS Computer Science">
+                    </div>
+                </div>
+            </div>
+    
+            <div class="form-group shadow">
+                <div class="form-group-header">
+                    <h2><i class="fa-solid fa-list"></i> Student Details</h2>
+                </div>
+                
+                <div class="form-group-body">
+                    <div class="form-entry-horizontal">
+                        <div class="form-entry">
+                            <label for="age">Age <span class="required">*</span></label>
+                            <input required type="number" name="age" id="age" placeholder="18" min="16", max="100">
+                        </div>
+    
+                        <div class="form-entry">
+                            <label>Sex <span class="required">*</span></label>
+                            <select required name="sex" id="sex">
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="intersex">Intersex</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+        
+                        <div class="form-entry">
+                            <label for="birthday">Birthday <span class="required">*</span></label>
+                            <input required type="date" name="birthday" id="birthday" max="2024-03-19">
+                        </div>
+        
+                        <div class="form-entry">
+                            <label for="birthplace">Birthplace <span class="required">*</span></label>
+                            <input required type="text" name="birthplace" id="birthplace" placeholder="City, Province">
+                        </div>
+                    </div>
+        
+                    <div class="form-entry-horizontal">
+                        <div class="form-entry">
+                            <label for="legal-status">Legal Status <span class="required">*</span></label>                    
+                            <select required name="legal-status" id="legal-status">
+                                <option value="legal-status-1">Citizen of the Republic of the Philippines</option>
+                                <option value="legal-status-2">Permanent Resident</option>
+                                <option value="legal-status-3">Person granted permission to enter and remain as a student in the Republic of the Philippines on a visa for a defined period of time</option>
+                                <option value="legal-status-4">Person granted permission to enter and remain as a child or spouse of a worker on a visa for a defined period of time</option>
+                                <option value="legal-status-5">Other visa</option>
+                                <option value="legal-status-6">Legal status not known</option>
+                            </select>
+                            
+                        </div>
+    
+                        <div class="form-entry">
+                            <label for="civil-status">Civil Status <span class="required">*</span></label>                    
+                            <select required name="civil-status" id="civil-status">
+                                <option value="civil-status-1">Single</option>
+                                <option value="civil-status-2">Married</option>
+                                <option value="civil-status-3">Divorced</option>
+                                <option value="civil-status-4">Widowed</option>
+                                <option value="civil-status-5">Separated</option>
+                            </select>                        
+                        </div>
+                    </div>
+
+                    <div class="form-entry-horizontal">
+                        <div class="form-entry">
+                            <label for="nationality">Nationality <span class="required">*</span></label>
+                            <select required name="nationality" id="nationality">
+                                <option value="afghan">Afghan</option>
+                                <option value="albanian">Albanian</option>
+                                <option value="algerian">Algerian</option>
+                                <option value="american">American</option>
+                                <option value="andorran">Andorran</option>
+                                <option value="angolan">Angolan</option>
+                                <option value="antiguans">Antiguans</option>
+                                <option value="argentinean">Argentinean</option>
+                                <option value="armenian">Armenian</option>
+                                <option value="australian">Australian</option>
+                                <option value="austrian">Austrian</option>
+                                <option value="azerbaijani">Azerbaijani</option>
+                                <option value="bahamian">Bahamian</option>
+                                <option value="bahraini">Bahraini</option>
+                                <option value="bangladeshi">Bangladeshi</option>
+                                <option value="barbadian">Barbadian</option>
+                                <option value="barbudans">Barbudans</option>
+                                <option value="batswana">Batswana</option>
+                                <option value="belarusian">Belarusian</option>
+                                <option value="belgian">Belgian</option>
+                                <option value="belizean">Belizean</option>
+                                <option value="beninese">Beninese</option>
+                                <option value="bhutanese">Bhutanese</option>
+                                <option value="bolivian">Bolivian</option>
+                                <option value="bosnian">Bosnian</option>
+                                <option value="brazilian">Brazilian</option>
+                                <option value="british">British</option>
+                                <option value="bruneian">Bruneian</option>
+                                <option value="bulgarian">Bulgarian</option>
+                                <option value="burkinabe">Burkinabe</option>
+                                <option value="burmese">Burmese</option>
+                                <option value="burundian">Burundian</option>
+                                <option value="cambodian">Cambodian</option>
+                                <option value="cameroonian">Cameroonian</option>
+                                <option value="canadian">Canadian</option>
+                                <option value="cape-verdean">Cape Verdean</option>
+                                <option value="central-african">Central African</option>
+                                <option value="chadian">Chadian</option>
+                                <option value="chilean">Chilean</option>
+                                <option value="chinese">Chinese</option>
+                                <option value="colombian">Colombian</option>
+                                <option value="comoran">Comoran</option>
+                                <option value="congolese">Congolese</option>
+                                <option value="costa-rican">Costa Rican</option>
+                                <option value="croatian">Croatian</option>
+                                <option value="cuban">Cuban</option>
+                                <option value="cypriot">Cypriot</option>
+                                <option value="czech">Czech</option>
+                                <option value="danish">Danish</option>
+                                <option value="djibouti">Djibouti</option>
+                                <option value="dominican">Dominican</option>
+                                <option value="dutch">Dutch</option>
+                                <option value="east-timorese">East Timorese</option>
+                                <option value="ecuadorean">Ecuadorean</option>
+                                <option value="egyptian">Egyptian</option>
+                                <option value="emirian">Emirian</option>
+                                <option value="equatorial-guinean">Equatorial Guinean</option>
+                                <option value="eritrean">Eritrean</option>
+                                <option value="estonian">Estonian</option>
+                                <option value="ethiopian">Ethiopian</option>
+                                <option value="fijian">Fijian</option>
+                                <option value="filipino" selected>Filipino</option>
+                                <option value="finnish">Finnish</option>
+                                <option value="french">French</option>
+                                <option value="gabonese">Gabonese</option>
+                                <option value="gambian">Gambian</option>
+                                <option value="georgian">Georgian</option>
+                                <option value="german">German</option>
+                                <option value="ghanaian">Ghanaian</option>
+                                <option value="greek">Greek</option>
+                                <option value="grenadian">Grenadian</option>
+                                <option value="guatemalan">Guatemalan</option>
+                                <option value="guinea-bissauan">Guinea-Bissauan</option>
+                                <option value="guinean">Guinean</option>
+                                <option value="guyanese">Guyanese</option>
+                                <option value="haitian">Haitian</option>
+                                <option value="herzegovinian">Herzegovinian</option>
+                                <option value="honduran">Honduran</option>
+                                <option value="hungarian">Hungarian</option>
+                                <option value="icelander">Icelander</option>
+                                <option value="indian">Indian</option>
+                                <option value="indonesian">Indonesian</option>
+                                <option value="iranian">Iranian</option>
+                                <option value="iraqi">Iraqi</option>
+                                <option value="irish">Irish</option>
+                                <option value="israeli">Israeli</option>
+                                <option value="italian">Italian</option>
+                                <option value="ivorian">Ivorian</option>
+                                <option value="jamaican">Jamaican</option>
+                                <option value="japanese">Japanese</option>
+                                <option value="jordanian">Jordanian</option>
+                                <option value="kazakhstani">Kazakhstani</option>
+                                <option value="kenyan">Kenyan</option>
+                                <option value="kittian-and-nevisian">Kittian and Nevisian</option>
+                                <option value="kuwaiti">Kuwaiti</option>
+                                <option value="kyrgyz">Kyrgyz</option>
+                                <option value="laotian">Laotian</option>
+                                <option value="latvian">Latvian</option>
+                                <option value="lebanese">Lebanese</option>
+                                <option value="liberian">Liberian</option>
+                                <option value="libyan">Libyan</option>
+                                <option value="liechtensteiner">Liechtensteiner</option>
+                                <option value="lithuanian">Lithuanian</option>
+                                <option value="luxembourger">Luxembourger</option>
+                                <option value="macedonian">Macedonian</option>
+                                <option value="malagasy">Malagasy</option>
+                                <option value="malawian">Malawian</option>
+                                <option value="malaysian">Malaysian</option>
+                                <option value="maldivan">Maldivan</option>
+                                <option value="malian">Malian</option>
+                                <option value="maltese">Maltese</option>
+                                <option value="marshallese">Marshallese</option>
+                                <option value="mauritanian">Mauritanian</option>
+                                <option value="mauritian">Mauritian</option>
+                                <option value="mexican">Mexican</option>
+                                <option value="micronesian">Micronesian</option>
+                                <option value="moldovan">Moldovan</option>
+                                <option value="monacan">Monacan</option>
+                                <option value="mongolian">Mongolian</option>
+                                <option value="moroccan">Moroccan</option>
+                                <option value="mosotho">Mosotho</option>
+                                <option value="motswana">Motswana</option>
+                                <option value="mozambican">Mozambican</option>
+                                <option value="namibian">Namibian</option>
+                                <option value="nauruan">Nauruan</option>
+                                <option value="nepalese">Nepalese</option>
+                                <option value="new-zealander">New Zealander</option>
+                                <option value="ni-vanuatu">Ni-Vanuatu</option>
+                                <option value="nicaraguan">Nicaraguan</option>
+                                <option value="nigerien">Nigerien</option>
+                                <option value="north-korean">North Korean</option>
+                                <option value="northern-irish">Northern Irish</option>
+                                <option value="norwegian">Norwegian</option>
+                                <option value="omani">Omani</option>
+                                <option value="pakistani">Pakistani</option>
+                                <option value="palauan">Palauan</option>
+                                <option value="panamanian">Panamanian</option>
+                                <option value="papua-new-guinean">Papua New Guinean</option>
+                                <option value="paraguayan">Paraguayan</option>
+                                <option value="peruvian">Peruvian</option>
+                                <option value="polish">Polish</option>
+                                <option value="portuguese">Portuguese</option>
+                                <option value="qatari">Qatari</option>
+                                <option value="romanian">Romanian</option>
+                                <option value="russian">Russian</option>
+                                <option value="rwandan">Rwandan</option>
+                                <option value="saint-lucian">Saint Lucian</option>
+                                <option value="salvadoran">Salvadoran</option>
+                                <option value="samoan">Samoan</option>
+                                <option value="san-marinese">San Marinese</option>
+                                <option value="sao-tomean">Sao Tomean</option>
+                                <option value="saudi">Saudi</option>
+                                <option value="scottish">Scottish</option>
+                                <option value="senegalese">Senegalese</option>
+                                <option value="serbian">Serbian</option>
+                                <option value="seychellois">Seychellois</option>
+                                <option value="sierra-leonean">Sierra Leonean</option>
+                                <option value="singaporean">Singaporean</option>
+                                <option value="slovakian">Slovakian</option>
+                                <option value="slovenian">Slovenian</option>
+                                <option value="solomon-islander">Solomon Islander</option>
+                                <option value="somali">Somali</option>
+                                <option value="south-african">South African</option>
+                                <option value="south-korean">South Korean</option>
+                                <option value="spanish">Spanish</option>
+                                <option value="sri-lankan">Sri Lankan</option>
+                                <option value="sudanese">Sudanese</option>
+                                <option value="surinamer">Surinamer</option>
+                                <option value="swazi">Swazi</option>
+                                <option value="swedish">Swedish</option>
+                                <option value="swiss">Swiss</option>
+                                <option value="syrian">Syrian</option>
+                                <option value="taiwanese">Taiwanese</option>
+                                <option value="tajik">Tajik</option>
+                                <option value="tanzanian">Tanzanian</option>
+                                <option value="thai">Thai</option>
+                                <option value="togolese">Togolese</option>
+                                <option value="tongan">Tongan</option>
+                                <option value="trinidadian-or-tobagonian">Trinidadian or Tobagonian</option>
+                                <option value="tunisian">Tunisian</option>
+                                <option value="turkish">Turkish</option>
+                                <option value="tuvaluan">Tuvaluan</option>
+                                <option value="ugandan">Ugandan</option>
+                                <option value="ukrainian">Ukrainian</option>
+                                <option value="uruguayan">Uruguayan</option>
+                                <option value="uzbekistani">Uzbekistani</option>
+                                <option value="venezuelan">Venezuelan</option>
+                                <option value="vietnamese">Vietnamese</option>
+                                <option value="welsh">Welsh</option>
+                                <option value="yemenite">Yemenite</option>
+                                <option value="zambian">Zambian</option>
+                                <option value="zimbabwean">Zimbabwean</option>
+                            </select>
+                        </div>
+        
+                        <div class="form-entry">
+                            <label for="acr">ACR Number <em>(if alien)</em></label>
+                            <input type="text" name="acr" id="acr" placeholder="F140300455TV">
+                        </div>
+                    </div>
+
+                    <div class="form-entry">
+                        <label for="province">Province <span class="required">*</span></label>
+                        <select required name="province" id="province">
+                            <option value="abra">Abra</option>
+                            <option value="agusan-del-norte">Agusan Del Norte</option>
+                            <option value="agusan-del-sur">Agusan Del Sur</option>
+                            <option value="aklan">Aklan</option>
+                            <option value="albay">Albay</option>
+                            <option value="antique">Antique</option>
+                            <option value="antique">Antique</option>
+                            <option value="apayao">Apayao</option>
+                            <option value="aurora">Aurora</option>
+                            <option value="basilan">Basilan</option>
+                            <option value="bataan">Bataan</option>
+                            <option value="batanes">Batanes</option>
+                            <option value="batangas">Batangas</option>
+                            <option value="benguet">Benguet</option>
+                            <option value="biliran">Biliran</option>
+                            <option value="bohol">Bohol</option>
+                            <option value="bukidnon">Bukidnon</option>
+                            <option value="bulacan">Bulacan</option>
+                            <option value="cagayan">Cagayan</option>
+                            <option value="camarines-norte">Camarines Norte</option>
+                            <option value="camarines-sur">Camarines Sur</option>
+                            <option value="camiguin">Camiguin</option>
+                            <option value="capiz">Capiz</option>
+                            <option value="catanduanes">Catanduanes</option>
+                            <option value="cavite">Cavite</option>
+                            <option value="cebu">Cebu</option>
+                            <option value="cotabato-(north-cotabato)">Cotabato (North Cotabato)</option>
+                            <option value="cotabato-city-(not-a-province)">Cotabato City (Not A Province)</option>
+                            <option value="davao-de-oro">Davao De Oro</option>
+                            <option value="davao-del-norte">Davao Del Norte</option>
+                            <option value="davao-del-sur">Davao Del Sur</option>
+                            <option value="davao-occidental">Davao Occidental</option>
+                            <option value="davao-oriental">Davao Oriental</option>
+                            <option value="dinagat-islands">Dinagat Islands</option>
+                            <option value="eastern-samar">Eastern Samar</option>
+                            <option value="guimaras">Guimaras</option>
+                            <option value="ifugao">Ifugao</option>
+                            <option value="ilocos-norte">Ilocos Norte</option>
+                            <option value="ilocos-sur">Ilocos Sur</option>
+                            <option value="iloilo">Iloilo</option>
+                            <option value="isabela">Isabela</option>
+                            <option value="isabela-city-(not-a-province)">Isabela City (Not a Province)</option>
+                            <option value="kalinga">Kalinga</option>
+                            <option value="la-union">La Union</option>
+                            <option value="laguna">Laguna</option>
+                            <option value="lanao-del-norte">Lanao Del Norte</option>
+                            <option value="lanao-del-sur">Lanao Del Sur</option>
+                            <option value="leyte">Leyte</option>
+                            <option value="maguindanao">Maguindanao</option>
+                            <option value="marinduque">Marinduque</option>
+                            <option value="masbate">Masbate</option>
+                            <option value="metro-manila" selected>Metro Manila</option>
+                            <option value="misamis-occidental">Misamis Occidental</option>
+                            <option value="misamis-oriental">Misamis Oriental</option>
+                            <option value="mountain-province">Mountain Province</option>
+                            <option value="negros-occidental">Negros Occidental</option>
+                            <option value="negros-oriental">Negros Oriental</option>
+                            <option value="northern-samar">Northern Samar</option>
+                            <option value="nueva-ecija">Nueva Ecija</option>
+                            <option value="nueva-vizcaya">Nueva Vizcaya</option>
+                            <option value="occidental-mindoro">Occidental Mindoro</option>
+                            <option value="oriental-mindoro">Oriental Mindoro</option>
+                            <option value="palawan">Palawan</option>
+                            <option value="pampanga">Pampanga</option>
+                            <option value="pangasinan">Pangasinan</option>
+                            <option value="quezon">Quezon</option>
+                            <option value="quirino">Quirino</option>
+                            <option value="rizal">Rizal</option>
+                            <option value="romblon">Romblon</option>
+                            <option value="samar-(western-samar)">Samar (Western Samar)</option>
+                            <option value="sarangani">Sarangani</option>
+                            <option value="shariff-kabunsuan">Shariff Kabunsuan</option>
+                            <option value="siquijor">Siquijor</option>
+                            <option value="sorsogon">Sorsogon</option>
+                            <option value="south-cotabato">South Cotabato</option>
+                            <option value="southern-leyte">Southern Leyte</option>
+                            <option value="sultan-kudarat">Sultan Kudarat</option>
+                            <option value="sulu">Sulu</option>
+                            <option value="surigao-del-norte">Surigao Del Norte</option>
+                            <option value="surigao-del-sur">Surigao Del Sur</option>
+                            <option value="tarlac">Tarlac</option>
+                            <option value="tawi-tawi">Tawi-Tawi</option>
+                            <option value="zambales">Zambales</option>
+                            <option value="zamboanga-del-norte">Zamboanga Del Norte</option>
+                            <option value="zamboanga-del-sur">Zamboanga Del Sur</option>
+                            <option value="zamboanga-sibugay">Zamboanga Sibugay</option>
+                        </select>
+                    </div>
+
+                    <div class="form-entry-horizontal">
+                        <div class="form-entry">
+                            <label for="city-address">City Address <span class="required">*</span></label>
+                            <input required type="text" name="city-address" id="city-address" placeholder="House/Apartment/Unit/Floor No., Building Name, Street Name, Barangay, City, Province, Country">
+                        </div>
+                        <div class="form-entry" style="flex: 0.10;">
+                            <label for="zip-code">ZIP Code <span class="required">*</span></label>
+                            <input required type="text" name="zip-code" id="city-zip-code" maxlength="4" size="4" placeholder="4116" pattern="[\d]{4}">
+                        </div>
+                    </div>
+        
+                    <div class="form-entry-horizontal">
+                        <div class="form-entry">
+                            <label for="home-address">Home Address <span class="required">*</span></label>
+                            <input required type="text" name="home-address" id="home-address" placeholder="House/Apartment/Unit/Floor No., Building Name, Street Name, Barangay, City, Province, Country">
+                        </div>
+                        <div class="form-entry" style="flex: 0.10;">
+                            <label for="zip-code">ZIP Code <span class="required">*</span></label>
+                            <input required type="text" name="zip-code" id="home-zip-code" maxlength="4" size="4" placeholder="1405" pattern="[\d]{4}">
+                        </div>
+                    </div>
+    
+                    <div class="form-entry">
+                        <label for="religion">Religion <span class="required">*</span></label>
+                        <input required type="text" name="religion" id="religion" placeholder="Roman Catholic">
+                    </div>
+                </div>
+            </div>
+    
+            <div class="form-group shadow">
+                <div class="form-group-header">
+                    <h2><i class="fa-solid fa-users"></i> Guardian's Details</h2>
+                </div>
+                
+                <div class="form-group-body" style="gap: 32px;">
+                    <div class="form-group-subcategory">
+                        <h3>Father's Details</h3>
+        
+                        <div class="form-entry-horizontal">
+                            <div class="form-entry">
+                                <label for="father-last-name">Father's Last Name <span class="required">*</span></label>
+                                <input required type="text" name="father-last-name" id="father-last-name" placeholder="Dela Cruz">
+                            </div>
+                            <div class="form-entry">
+                                <label for="father-first-name">Father's First Name <span class="required">*</span></label>
+                                <input required type="text" name="father-first-name" id="father-first-name" placeholder="Juan">
+                            </div>
+                            <div class="form-entry">
+                                <label for="father-middle-name">Father's Middle Name <span class="required">*</span></label>
+                                <input required type="text" name="father-middle-name" id="father-middle-name" placeholder="Bolsa">
+                            </div>
+                            <div class="form-entry" style="flex-grow: 0.25;">
+                                <label for="father-auxiliary-name">Auxiliary Name</label>
+                                <input type="text" name="father-auxiliary-name" id="father-auxiliary-name" placeholder="Sr.">
+                            </div>
+                        </div>
+        
+                        <div class="form-entry-horizontal">
+                            <div class="form-entry">
+                                <label for="father-employment-status">Father's Employment Status <span class="required">*</span></label>
+                                <select required name="father-employment-status" id="father-employment-status">
+                                    <option value="full-time">Full Time</option>
+                                    <option value="part-time">Part Time</option>
+                                    <option value="self-employed">Self-employed</option>
+                                    <option value="unemployed">Unemployed</option>
+                                </select>
+                            </div>
+        
+                            <div class="form-entry">
+                                <label for="father-educational-attainment">Father's Educational Attainment <span class="required">*</span></label>
+                                <select required name="father-educational-attainment" id="father-educational-attainment">
+                                    <option value="below-high-school">Below High School Graduate</option>
+                                    <option value="high-school">High School Graduate</option>
+                                    <option value="associate-degree">Associate's Degree</option>
+                                    <option value="bachelor-degree">Bachelor's Degree</option>
+                                    <option value="master-degree">Master's Degree</option>
+                                    <option value="doctoral-degree">Doctoral Degree</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-entry">
+                                <label for="father-contact-number">Father's Contact Number <span class="required">*</span></label>
+                                <input required type="tel" name="father-contact-number" id="father-contact-number" placeholder="+63 912 345 6789" pattern="\+\d{2} \d{3} \d{3} \d{4}" maxlength="16">
+                            </div>
+                        </div>
+        
+                        <div class="form-entry-horizontal">
+                            <div class="form-entry">
+                                <label for="father-city-address">Father's Address <span class="required">*</span></label>
+                                <input required type="text" name="father-address" id="father-address" placeholder="House/Apartment/Unit/Floor No., Building Name, Street Name, Barangay, City, Province, Country">
+                            </div>
+                            <div class="form-entry" style="flex: 0.10;">
+                                <label for="father-zip-code">ZIP Code <span class="required">*</span></label>
+                                <input required type="text" name="father-zip-code" id="father-zip-code" maxlength="4" size="4" placeholder="4116" pattern="[\d]{4}">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group-subcategory">
+                        <h3>Mother's Details</h3>
+    
+                        <div class="form-entry-horizontal">
+                            <div class="form-entry">
+                                <label for="mother-last-name">Mother's Last Name <span class="required">*</span></label>
+                                <input required type="text" name="mother-last-name" id="mother-last-name" placeholder="Perez">
+                            </div>
+                            <div class="form-entry">
+                                <label for="mother-first-name">Mother's First Name <span class="required">*</span></label>
+                                <input required type="text" name="mother-first-name" id="mother-first-name" placeholder="Juanita">
+                            </div>
+                            <div class="form-entry">
+                                <label for="mother-middle-name">Mother's Middle Name <span class="required">*</span></label>
+                                <input required type="text" name="mother-middle-name" id="mother-middle-name" placeholder="Dimapiliz">
+                            </div>
+                            <div class="form-entry" style="flex-grow: 0.25;">
+                                <label for="mother-auxiliary-name">Auxiliary Name</label>
+                                <input type="text" name="mother-auxiliary-name" id="mother-auxiliary-name" placeholder="">
+                            </div>
+                        </div>
+        
+                        <div class="form-entry-horizontal">
+                            <div class="form-entry">
+                                <label for="mother-employment-status">Mother's Employment Status <span class="required">*</span></label>
+                                <select required name="mother-employment-status" id="mother-employment-status">
+                                    <option value="full-time">Full Time</option>
+                                    <option value="part-time">Part Time</option>
+                                    <option value="self-employed">Self-employed</option>
+                                    <option value="unemployed">Unemployed</option>
+                                </select>
+                            </div>
+        
+                            <div class="form-entry">
+                                <label for="mother-educational-attainment">Mother's Educational Attainment <span class="required">*</span></label>
+                                <select required name="mother-educational-attainment" id="mother-educational-attainment">
+                                    <option value="below-high-school">Below High School Graduate</option>
+                                    <option value="high-school">High School Graduate</option>
+                                    <option value="associate-degree">Associate's Degree</option>
+                                    <option value="bachelor-degree">Bachelor's Degree</option>
+                                    <option value="master-degree">Master's Degree</option>
+                                    <option value="doctoral-degree">Doctoral Degree</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-entry">
+                                <label for="mother-contact-number">Mother's Contact Number <span class="required">*</span></label>
+                                <input required type="tel" name="mother-contact-number" id="mother-contact-number" placeholder="+63 912 345 6789" patter="\+\d{2} \d{3} \d{3} \d{4}" maxlength="16">
+                            </div>
+                        </div>
+        
+                        <div class="form-entry-horizontal">
+                            <div class="form-entry">
+                                <label for="mother-city-address">Mother's Address <span class="required">*</span></label>
+                                <input required type="text" name="mother-address" id="mother-address" placeholder="House/Apartment/Unit/Floor No., Building Name, Street Name, Barangay, City, Province, Country">
+                            </div>
+                            <div class="form-entry" style="flex: 0.10;">
+                                <label for="mother-zip-code">ZIP Code <span class="required">*</span></label>
+                                <input required type="text" name="mother-zip-code" id="mother-zip-code" maxlength="4" size="4" placeholder="4116" pattern="[\d]{4}">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group-subcategory">
+                        <h3>Guardian's Details</h3>
+                        
+                        <div class="form-entry-horizontal">
+                            <div class="form-entry">
+                                <label for="guardian-last-name">Guardian's Last Name</label>
+                                <input type="text" name="guardian-last-name" id="guardian-last-name" placeholder="Gomez">
+                            </div>
+                            <div class="form-entry">
+                                <label for="guardian-first-name">Guardian's First Name</label>
+                                <input type="text" name="guardian-first-name" id="guardian-first-name" placeholder="Felix">
+                            </div>
+                            <div class="form-entry">
+                                <label for="guardian-middle-name">Guardian's Middle Name</label>
+                                <input type="text" name="guardian-middle-name" id="guardian-middle-name" placeholder="Herrera">
+                            </div>
+                            <div class="form-entry" style="flex-grow: 0.25;">
+                                <label for="guardian-auxiliary-name">Auxiliary Name</label>
+                                <input type="text" name="guardian-auxiliary-name" id="guardian-auxiliary-name" placeholder="III">
+                            </div>
+                        </div>
+        
+                        <div class="form-entry-horizontal">
+                            <div class="form-entry">
+                                <label for="guardian-employment-status">Guardian's Employment Status</label>
+                                <select name="guardian-employment-status" id="guardian-employment-status">
+                                    <option value="full-time">Full Time</option>
+                                    <option value="part-time">Part Time</option>
+                                    <option value="self-employed">Self-employed</option>
+                                    <option value="unemployed">Unemployed</option>
+                                </select>
+                            </div>
+        
+                            <div class="form-entry">
+                                <label for="guardian-educational-attainment">Guardian's Educational Attainment</label>
+                                <select name="guardian-educational-attainment" id="guardian-educational-attainment">
+                                    <option value="below-high-school">Below High School Graduate</option>
+                                    <option value="high-school">High School Graduate</option>
+                                    <option value="associate-degree">Associate's Degree</option>
+                                    <option value="bachelor-degree">Bachelor's Degree</option>
+                                    <option value="master-degree">Master's Degree</option>
+                                    <option value="doctoral-degree">Doctoral Degree</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-entry">
+                                <label for="guardian-contact-number">Guardian's Contact Number</label>
+                                <input type="tel" name="guardian-contact-number" id="guardian-contact-number" placeholder="+63 912 345 6789" pattern="\+\d{2} \d{3} \d{3} \d{4}" maxlength="16">
+                            </div>
+                        </div>
+        
+                        <div class="form-entry-horizontal">
+                            <div class="form-entry">
+                                <label for="guardian-city-address">Guardian's Address</label>
+                                <input type="text" name="guardian-address" id="guardian-address" placeholder="House/Apartment/Unit/Floor No., Building Name, Street Name, Barangay, City, Province, Country">
+                            </div>
+                            <div class="form-entry" style="flex: 0.10;">
+                                <label for="guardian-zip-code">ZIP Code</label>
+                                <input type="text" name="guardian-zip-code" id="guardian-zip-code" maxlength="4" size="4" placeholder="4116" pattern="[\d]{4}">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="shadow" type="submit">Submit</button>
+        </div>
+    </form>
+</body>
+</html>

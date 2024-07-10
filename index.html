@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>~ Good Morning ~</title>
+    <link rel="shortcut icon" href="./_global-resources/favicon.svg" type="image/x-icon">
+
+    <link rel="stylesheet" href="./_global-resources/styles/reset.css">
+    <link rel="stylesheet" href="./_global-resources/styles/global.css">
+    <link rel="stylesheet" href="./_resources/styles/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+</head>
+<body>
+    <header class="banner">
+        <div class="banner__content">
+            <img class="banner__content__photo" src="./_resources/images/jhndrncrz-posterized.svg" alt="Posterized photo of jhndrncrz">
+            
+            <div class="banner__content__logo logo">
+                <div class="logo__ellipse"></div>
+                <p class="logo__good-morning">
+                    Good Morning
+                </p>
+                <p class="logo__jhndrncrz">
+                    jhndrncrz!
+                </p>    
+            </div>
+        </div>
+        <nav class="banner__navigation">
+            <a class="banner__navigation__link" href="./">Home</a>
+            <a class="banner__navigation__link" href="./activities/prelims/1/index.html">About Me</a>
+            <a class="banner__navigation__link" href="./">Final Project</a>
+        </nav>
+    </header>
+    <main>
+        <nav class="navigation">
+            <button class="navigation__button" onclick="page_prev()">
+                &lt; &lt; &lt;
+            </button>
+
+            <h1 class="navigation__location">Lectures</h1>
+
+            <button class="navigation__button" onclick="page_next()">
+                &gt; &gt; &gt;
+            </button>
+        </nav>
+        
+        <div class="tasks-container">
+            <section id="lectures" class="tasks tasks--lectures">
+                <button class="task" onclick="location.href=`./lectures/1/index.html`;">
+                    <h2 class="task__number">1</h2>
+                    <p class="task__name">Intro to Web Design and Components</p>
+    
+                    <div class="task__meta">
+                        <p class="task__meta__term">Prelims</p>
+                        <p class="task__meta__module">ACT1</p>
+                    </div>
+                </button>
+    
+                <button class="task" onclick="location.href=`./lectures/2/index.html`;">
+                    <h2 class="task__number">2</h2>
+                    <p class="task__name">HTML Structures</p>
+    
+                    <div class="task__meta">
+                        <p class="task__meta__term">Prelims</p>
+                        <p class="task__meta__module">EX2</p>
+                    </div>
+                </button>
+    
+                <button class="task" onclick="location.href=`./lectures/3/index.html`;">
+                    <h2 class="task__number">3</h2>
+                    <p class="task__name">Lists and Tables</p>
+    
+                    <div class="task__meta">
+                        <p class="task__meta__term">Prelims</p>
+                        <p class="task__meta__module">EX3</p>
+                    </div>
+                </button>
+    
+                <button class="task" onclick="location.href=`./lectures/4/index.html`;">
+                    <h2 class="task__number">4</h2>
+                    <p class="task__name">Links and Images</p>
+    
+                    <div class="task__meta">
+                        <p class="task__meta__term">Midterms</p>
+                        <p class="task__meta__module">ASG2</p>
+                    </div>
+                </button>
+    
+                <button class="task" onclick="location.href=`./lectures/5/index.html`;">
+                    <h2 class="task__number">5</h2>
+                    <p class="task__name">CSS</p>
+    
+                    <div class="task__meta">
+                        <p class="task__meta__term">Finals</p>
+                        <p class="task__meta__module">ACT2</p>
+                    </div>
+                </button>
+    
+                <button class="task" onclick="location.href=`./lectures/6/index.html`;">
+                    <h2 class="task__number">6</h2>
+                    <p class="task__name">Forms</p>
+    
+                    <div class="task__meta">
+                        <p class="task__meta__term">Midterms</p>
+                        <p class="task__meta__module">ACT3</p>
+                    </div>
+                </button>
+    
+                <button class="task" onclick="location.href=`./lectures/7/index.html`;">
+                    <h2 class="task__number">7</h2>
+                    <p class="task__name">Bootstrap</p>
+    
+                    <div class="task__meta">
+                        <p class="task__meta__term">Finals</p>
+                        <p class="task__meta__module">ASG1</p>
+                    </div>
+                </button>
+
+                <button class="task task--empty"></button> 
+                <button class="task task--empty"></button> 
+                <button class="task task--empty"></button> 
+            </section>
+    
+            <section id="activities" class="tasks tasks--activities">
+                <button class="task" onclick="location.href=`./activities/prelims/1/index.html`;">
+                    <h2 class="task__number">1</h2>
+                    <p class="task__name">Developer's Page</p>
+    
+                    <div class="task__meta">
+                        <p class="task__meta__term">Prelims</p>
+                        <p class="task__meta__module">ACT2</p>
+                    </div>
+                </button>
+    
+                <button class="task" onclick="location.href=`./activities/prelims/2/index.html`;">
+                    <h2 class="task__number">2</h2>
+                    <p class="task__name">Table of Contents</p>
+    
+                    <div class="task__meta">
+                        <p class="task__meta__term">Prelims</p>
+                        <p class="task__meta__module">ACT3</p>
+                    </div>
+                </button>
+    
+                <button class="task" onclick="location.href=`./activities/prelims/3/index.html`;">
+                    <h2 class="task__number">3</h2>
+                    <p class="task__name">Image Gallery</p>
+    
+                    <div class="task__meta">
+                        <p class="task__meta__term">Prelims</p>
+                        <p class="task__meta__module">ACT4</p>
+                    </div>
+                </button>
+    
+                <button class="task" onclick="location.href=`./activities/midterms/1/index.html`;">
+                    <h2 class="task__number">4</h2>
+                    <p class="task__name">Image Mapping</p>
+    
+                    <div class="task__meta">
+                        <p class="task__meta__term">Midterms</p>
+                        <p class="task__meta__module">ACT1</p>
+                    </div>
+                </button>
+    
+                <button class="task" onclick="location.href=`./activities/finals/1/index.html`;">
+                    <h2 class="task__number">5</h2>
+                    <p class="task__name">Bootstrap</p>
+    
+                    <div class="task__meta">
+                        <p class="task__meta__term">Finals</p>
+                        <p class="task__meta__module">ACT2</p>
+                    </div>
+                </button>
+
+                <button class="task task--empty"></button> 
+                <button class="task task--empty"></button> 
+                <button class="task task--empty"></button>
+                <button class="task task--empty"></button> 
+                <button class="task task--empty"></button> 
+            </section>
+    
+            <section id="quizzes" class="tasks tasks--quizzes">
+                <button class="task" onclick="location.href=`./quizzes/prelims/1/index.html`;">
+                    <h2 class="task__number">1</h2>
+                    <p class="task__name">Table with Images</p>
+    
+                    <div class="task__meta">
+                        <p class="task__meta__term">Prelims</p>
+                        <p class="task__meta__module">QZ1</p>
+                    </div>
+                </button>
+
+                <button class="task" onclick="location.href=`./quizzes/midterms/1/index.html`;">
+                    <h2 class="task__number">2</h2>
+                    <p class="task__name">Admission Form</p>
+    
+                    <div class="task__meta">
+                        <p class="task__meta__term">Midterms</p>
+                        <p class="task__meta__module">QZ1</p>
+                    </div>
+                </button>
+
+                <button class="task task--empty"></button> 
+                <button class="task task--empty"></button> 
+                <button class="task task--empty"></button>
+                <button class="task task--empty"></button> 
+                <button class="task task--empty"></button> 
+                <button class="task task--empty"></button>
+                <button class="task task--empty"></button> 
+                <button class="task task--empty"></button> 
+            </section>
+    
+            <section id="exams" class="tasks tasks--exams">
+                <button class="task" onclick="location.href=`./exams/prelims/src/index.html`;">
+                    <h2 class="task__number">1</h2>
+                    <p class="task__name">Prelims Exam</p>
+    
+                    <div class="task__meta">
+                        <p class="task__meta__term">Prelims</p>
+                        <p class="task__meta__module">EXAM</p>
+                    </div>
+                </button>
+
+                <button class="task" onclick="location.href=`./exams/midterms/index.html`;">
+                    <h2 class="task__number">2</h2>
+                    <p class="task__name">Midterms Exam</p>
+    
+                    <div class="task__meta">
+                        <p class="task__meta__term">Midterms</p>
+                        <p class="task__meta__module">EXAM</p>
+                    </div>
+                </button>
+
+                <button class="task task--empty"></button> 
+                <button class="task task--empty"></button> 
+                <button class="task task--empty"></button>
+                <button class="task task--empty"></button> 
+                <button class="task task--empty"></button> 
+                <button class="task task--empty"></button>
+                <button class="task task--empty"></button> 
+                <button class="task task--empty"></button> 
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <hr class="footer__divider">
+        <p class="footer__attribution">&copy; John Adrian Cruz. 2024.</p>
+    </footer>
+
+    <aside class="socials">
+        <a class="socials__link" href="https://www.facebook.com/jhndrncrz/"><i class="fa-brands fa-facebook"></i></a>
+        <a class="socials__link" href="https://x.com/jhndrncrz"><i class="fa-brands fa-x-twitter"></i></a>
+        <a class="socials__link" href="https://www.linkedin.com/in/jhndrncrz/"><i class="fa-brands fa-linkedin"></i></a>
+        <a class="socials__link" href="https://github.com/jhndrncrz/"><i class="fa-brands fa-github"></i></a>
+        <a class="socials__link" href="mailto:jhndrncrz@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+        <a class="socials__link" href="tel:+639604634661"><i class="fa-solid fa-mobile"></i></a>
+    </aside>
+    <script src="./_resources/scripts/script.js"></script>
+</body>
+</html>

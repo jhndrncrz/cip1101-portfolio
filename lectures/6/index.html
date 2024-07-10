@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity 3</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+</head>
+<body>
+    <div id="container">
+        <div id="signup-form">
+            <h1>Create an Account</h1>
+            <form action="get">
+                <hr>
+                
+                <div class="signup-field">
+                    <label for="email">Email <span>*</span></label>
+                    <input type="email" name="email" id="email" required placeholder="johndoe@example.com">
+                </div>
+                
+                <div class="signup-field">
+                    <label for="password">Password <span>*</span></label>
+                    <input type="password" name="password" id="password" required placeholder="johndoe123" minlength="8" pattern=".{8,}">
+                </div>
+
+                <div class="signup-field">
+                    <label for="age">Age <span>*</span></label>
+                    <input type="number" name="age" password="" required min="17">
+                    <!-- <select name="age" id="age" required onchange="change()">
+                        <option value="below-17" disabled selected>below 17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="above-25">above 25</option>
+                    </select> -->
+
+                    <script>
+                        function change(){
+                           if(document.getElementById(age).value === "below-17"){
+                                document.getElementById(age).style.borderColor = "red";
+                           } else {
+                                document.getElementById(age).style.borderColor = "green";
+                           }
+                        }
+                    </script>
+                </div>
+
+                <div class="signup-field">
+                    <label for="bio">Tell us a little about yourself! <span>*</span></label>
+                    <textarea name="bio" id="bio" cols="30" rows="10" required></textarea>
+                </div>
+                
+                <div>
+                    <input type="checkbox" name="terms" id="terms"> <label for="terms">I agree to the <a href="#">terms of service.</a></label>
+                </div>
+                
+                <button type="submit">Sign Up!</button>
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>

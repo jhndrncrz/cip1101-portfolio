@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --vox-black: #313730;
+    --vox-yellow: #fef102;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Roboto";
+    font-weight: 900;
+}
+
+body {
+    height: 100vh;
+
+    color: var(--vox-black);
+    font-family: "Roboto";
+    font-weight: 400;
+
+    background-color: var(--vox-black);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#container {
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#signup-form {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+
+    gap: 10px;
+    
+    background-color: white;
+    border: 5px solid var(--vox-black);
+    border-radius: 25px;
+    padding: 20px;
+}
+
+form {
+    display: flex;
+    flex-flow: column nowrap;
+    
+    gap: 10px;
+}
+
+label > span {
+    color: red;
+}
+
+.signup-field {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+input, select {
+    padding: 4px 8px;
+    border-radius: 5px;
+    border: 2px solid;
+}
+
+textarea {
+    font-family: "Roboto";
+    font-weight: 400;
+
+    padding: 4px 8px;
+    border-radius: 5px;
+    border: 2px solid;
+}
+
+button {
+    background-color: var(--vox-black);
+    color: white;
+    border: none;
+    outline: none;
+
+    border: 2px solid;
+    border-radius: 5px;
+
+    padding: 4px;
+
+    transition: background-color linear 0.25s;
+}
+
+button:hover {
+    background-color: green;
+
+}
+
+input[type="email"]:valid {
+    border-color: green;
+}
+
+input[type="email"]:invalid {
+    border-color: red;
+}
+
+input[type="password"]:valid {
+    border-color: green;
+}
+
+input[type="password"]:invalid {
+    border-color: red;
+}
+
+input[type="number"]:valid {
+    border-color: green;
+}
+
+input[type="number"]:invalid {
+    border-color: red;
+}
+
+textarea:valid {
+    border-color:green;
+}
+
+textarea:invalid {
+    border-color:blue;
+}
+
+input[type="checkbox"]:checked {
+    width: 20px;
+    height: 20px;
+}

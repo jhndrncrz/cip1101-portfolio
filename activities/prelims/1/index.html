@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jhndrncrz | About Me</title>
+    
+    <style>
+        @font-face {
+            font-family: dancing-script;
+            src: url("https://jhndrncrz.github.io/cip1101-personal-portfolio/dancing-script.woff");
+        }
+
+        @font-face {
+            font-family: script1-script-casual;
+            src: url("https://jhndrncrz.github.io/cip1101-personal-portfolio/script1-script-casual.woff");
+        }
+
+        body {
+            min-width: 600px;
+            width: 80%;
+            margin: auto;
+        }
+        /*Text*/
+        h2 {
+            margin: 0;
+            padding: 5pt;
+            font-family: script1-script-casual, sans-serif;
+            font-weight: bold;
+            color: white;
+            text-transform: uppercase;
+        }
+        h3 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            color: #e4001b;
+        }
+        p, li {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        code {
+            font-size: 16px;
+        }
+
+        /* Side-by-Side */
+        .two-column {
+            display: flex;
+        }
+        .side-a {
+            flex: 2;
+        }
+        .side-b {
+            flex: 1;
+        }
+
+        /* Banner */
+        .banner {
+            height: 350pt;
+            margin: 10pt;
+
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #e4001b;
+        }
+
+        .banner-photo {
+            position: absolute;
+            height: 100%;
+            left: 0pt;
+        }
+
+        .banner-logo {
+            position: absolute;
+            width: 60%;
+        }
+
+        /* Footer */
+        .copyright {
+            text-align: center;
+        }
+        /* Sections */
+        .section {
+            margin: 10pt;
+
+            border: 3pt solid #014a95;
+            box-shadow: 5pt 5pt #014a95;
+        }
+
+        .section-header {
+            width: 100%;
+            margin: 0;
+            
+            background-color: #014a95;
+        }   
+
+        .section-body {
+            padding: 0 10pt;
+        }
+
+        /* Entry */
+        .entry {
+            margin: 10pt;
+
+            border: 3pt solid #014a95;
+            box-shadow: 5pt 5pt #014a95;
+        }
+        
+        .entry-header {
+            padding: 0 10pt;
+        }
+
+        .entry-header-line {
+            display: flex;
+        }
+        .entry-title, .entry-date {
+            margin: 0;
+            margin-top: revert;
+        }
+        .entry-place, .entry-aux {
+            margin: 0;
+            margin-bottom: revert;
+        }
+
+        .entry-title, .entry-place {
+            flex: 3;
+            text-align: left;
+        }
+        .entry-date, .entry-aux {
+            flex: 1;
+            text-align: right;
+        }
+        
+        .entry-title, .entry-date, .entry-place, .entry-aux {
+            margin-bottom: 0;
+            font-size: 16px;
+        }
+
+        .entry-body {
+            padding: 0 10pt;
+        }
+
+        .entry-aux {
+            font-style: italic;
+        }
+
+        /* Anchors */
+        a {
+            text-decoration: none;
+        }
+        a:link {
+            color: #014a95;
+        }
+        a:hover {
+            color: #014a95;
+            text-decoration: underline;
+        }
+        a:visited {
+            color: #e4001b;
+        }
+        a:active {
+            color: white;
+            background-color: #014a95;
+        }
+
+        hr {
+            margin-top: 30px;
+            border: 0;
+            border-top: 3pt dotted #014a95;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="banner">
+            <img class="banner-photo" src="https://jhndrncrz.github.io/cip1101-personal-portfolio/banner-photo.svg" alt="Posterized photo of jhndrncrz">
+            <img class="banner-logo" src="https://jhndrncrz.github.io/cip1101-personal-portfolio/banner-logo.svg" alt="Logo of jhndrncrz">
+        </div>
+    </header>
+    
+    <main>
+        <div class="two-column">
+            <article class="section side-a">
+                <div class="section-header">
+                    <h2>About Me</h2>
+                </div>
+                
+                <div class="section-body">
+                    <p>Hi! I'm <span title="Stands for JoHN aDRiaN CRuZ, the consonants in my name!"><strong>jhndrncrz</strong></span>, an aspiring future software developer with a strong interest in <em>data science</em> as well as <em>applications and web development</em>. Also versed in writing, graphic design, and illustration. Fast learner, hard worker. Reach out to me via <a href="mailto:jhndrncrz@gmail.com">email</a> or <a href="tel:+639604634661">mobile</a>, or check my work out at <a href="https://www.facebook.com/jhndrncrz">Facebook</a>/<a href="https://www.twitter.com/jhndrncrz">Twitter</a>/<a href="https://stackoverflow.com/users/21891493/jhndrncrz">StackOverflow</a>/<a href="https://github.com/jhndrncrz">GitHub</a>: @jhndrncrz!</p>
+    
+                    <p>🎓 Currently taking a degree in BS Computer Science at <a href="https://www.ue.edu.ph/mla/">University of the East - Manila</a></p>
+                    
+                    <p>🧠 Proficient in 🟰 Mathematics, 💻 Software Development, 🧪 Scientific Research, 🎨 Graphic Design, 📋 Report Writing</p>
+                    
+                    <p>💕 Enjoys 👣 music, playing instruments (🎹 piano and 🎸 guitar), 👣 taking long walks, ☁️ recreational learning, 📚 reading academic books and writings</p>
+                    
+                    <p>📋 Prior experiences and personal projects include: investigatory projects/research on earth & environmental sciences, and robotics & intelligent machines; embedded systems development with Arduino; participation in robotics competitions; website development in WordPress for a private school and a student-led news publication; content creation and social media management; layout and graphics design</p>
+                </div>
+            </article>
+    
+            <aside>
+                <div class="side-b">
+                    <article class="section">
+                        <div class="section-header">
+                            <h2>Technologies</h2>
+                        </div>
+        
+                        <div class="section-body">
+                            <ul>
+                                <li>Python</li>
+                                <li>Java</li>
+                                <li>Rust</li>
+                                <li>Git</li>
+                                <li>Linux</li>
+                            </ul>
+                        </div>
+                    </article>
+                    
+                    <article class="section">
+                        <div class="section-header">
+                            <h2>Technical Skills</h2>
+                        </div>
+                        
+                        <div class="section-body">
+                            <ul>
+                                <li>Adobe Photoshop and Illustrator</li>
+                                <li>Microsoft Word, Excel, and Powerpoint</li>
+                                <li>Technical Writing</li>
+                                <li>Graphic Design</li>
+                                <li>Academic Research</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <article class="section">
+        <div class="section-header">
+            <h2>Education</h2>
+        </div>
+        
+        <div class="section-body">
+            <article class="entry">
+                <div class="entry-header">
+                    <div class="entry-header-line">
+                        <h3 class="entry-title">BS Computer Science</h3><p class="entry-date">Aug 2022 - Jun 2026</p>
+                    </div>
+                    <div class="entry-header-line">
+                        <p class="entry-place"><a href="https://www.ue.edu.ph/mla/">University of the East - Manila</a></p><p class="entry-aux">Manila City, Philippines</p>
+                    </div>
+                </div>
+                
+                <div class="entry-body">
+                    <ul>
+                        <li><a href="https://www.sei.dost.gov.ph/index.php/programs-and-projects/scholarships/undergraduate-scholarships">DOST-SEI Science & Technology Undergraduate Scholar</a></li>
+                        <li>College Scholar (Y1S1)</li>
+                        <li>University Scholar (Y1S2)</li>
+                        <li>University Scholar (Y2S1)</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="entry">
+                <div class="entry-header">
+                    <div class="entry-header-line">
+                        <h3 class="entry-title">Junior and Senior High School Graduate</h3><p class="entry-date">Jun 2016 - Jun 2022</p>
+                    </div>
+                    <div class="entry-header-line">
+                        <p class="entry-place">Malabon National High School</p><p class="entry-aux">Malabon City, Philippines</p>
+                    </div>
+                </div>
+                
+                <div class="entry-body">
+                    <ul>
+                        <li>Editor-in-Chief, Pigeoner (S.Y. 2019-2020)</li>
+                        <li>Layout Artist, Pigeoner (S.Y. 2018-2019)</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="entry">
+                <div class="entry-header">
+                    <div class="entry-header-line">
+                        <h3 class="entry-title">Elementary School Completer</h3><p class="entry-date">Jun 2010 - Apr 2016</p>
+                    </div>
+                    <div class="entry-header-line">
+                        <p class="entry-place">Dampalit Elementary School - Unit I</p><p class="entry-aux">Malabon City, Philippines</p>
+                    </div>
+                </div>
+                
+                <div class="entry-body">
+                    <ul>
+                        <li>President, Supreme Pupil Government (S.Y. 2015-2016)</li>
+                        <li>Manunulat, Diwa't Panitik (S.Y. 2015-2016)</li>
+                    </ul>
+                </div>
+            </article>
+        </div>
+    </article>
+    
+    <article class="section">
+        <div class="section-header">
+            <h2>Experience</h2>
+        </div>
+        
+        <div class="section-body">
+            <article class="entry">
+                <div class="entry-header">
+                    <div class="entry-header-line">
+                        <h3 class="entry-title">Remote Extern</h3><p class="entry-date">Sep 2023 - Oct 2023</p>
+                    </div>
+                    <div class="entry-header-line">
+                        <p class="entry-place"><a href="https://ignitexl.vc/">igniteXL Ventures</a> (via <a href="https://www.paragonone.com/">Paragon One</a>)</p><p class="entry-aux">New York, United States</p>
+                    </div>
+                    
+                </div>
+                
+                <div class="entry-body">
+                    <ul>
+                        <li>Researched and evaluated early stage start-ups in longevity tech to assess alignment with IgniteXL’s investment thesis</li>
+                        <li>Utilized due diligence processes to evaluate 15 other deal submissions for alignment</li>
+                        <li>Designed an investment summary document presenting key information to potential investors</li>
+                        <li>Received a certificate of Outstanding Completion for achieving strong evaluations</li>
+                    </ul>
+                </div>
+            </article>
+        
+            <article class="entry">
+                <div class="entry-header">
+                    <div class="entry-header-line">
+                        <h3 class="entry-title">Student Intern</h3><p class="entry-date">Apr 2022</p>
+                    </div>
+                    <div class="entry-header-line">
+                        <p class="entry-place"><a href="https://pnri.dost.gov.ph/">Department of Science and Technology - Philippine Nuclear Research Institute</a></p><p class="entry-aux">Quezon City, Philippines</p>
+                    </div>
+                </div>
+                
+                <div class="entry-body">
+                    <ul>
+                        <li>Served 80 hours of training as a student intern in the Applied Physics Research division under the <a href="https://pnri.dost.gov.ph/index.php/nuclear-training-center/on-the-job-training-opportunities">PNRI K-12 Immersion/Internship Program</a></li>
+                        <li>Performed various data processing and visualization tasks using Python, <code>pandas</code>, and <code>matplotlib</code></li>
+                    </ul>
+                </div>
+            </article>
+        
+            <article class="entry">
+                <div class="entry-header">
+                    <div class="entry-header-line">
+                        <h3 class="entry-title">Head Artist</h3><p class="entry-date">Apr 2020 - Apr 2021</p>
+                    </div>
+                    <div class="entry-header-line">
+                        <p class="entry-place"><a href="https://pigeongced.com">Project I Commit to Global Citizenship Education through Online Newspaper</a></p><p class="entry-aux">Malabon City, Philippines</p>
+                    </div>
+                </div>
+
+                <div class="entry-body">
+                    <ul>
+                        <li>Implemented and launched an online news publication website with WordPress</li>
+                        <li>Designed publishing materials for the website to enhance audience engagement</li>
+                        <li>Organized and coordinated the content creation and publication pipeline and ensured timely delivery of output, increasing the productivity of the writers, artists, and other staff</li>
+                    </ul>
+                </div>
+            </article>
+        </div>
+    </article>
+
+    <article class="section">
+        <div class="section-header">
+            <h2>Projects and Accomplishments</h2>
+        </div>
+
+        <div class="section-body">
+            <article class="entry">
+                <div class="entry-header">
+                    <div class="entry-header-line">
+                        <h3 class="entry-title">Spatiotemporal Analysis of Land Surface Temperature and 2022 Spectral Indices in Malabon City from 2001-2020</h3><p class="entry-date">2022</p>
+                    </div>
+                    <div class="entry-header-line">
+                        <p class="entry-place"><a href="http://malabonnhs.depedmalaboncity.ph/">Malabon NHS</a> | Capstone Project </p>
+                    </div>    
+                </div>
+                
+                <div class="entry-body">
+                    <ul>
+                        <li>Collected 20 years worth of satellite data from Landsat 5/7/8/9 regarding Malabon City's land surface temperature and land cover spectral indices</li>
+                        <li>Utilized QGIS and Python to perform comprehensive data analysis, including descriptive statistical analysis and regression analysis</li>
+                        <li>Produced results beneﬁcial in city planning and development such as identifying temperature trends and presenting the eﬀects of land use to surface temperature</li>
+                        <li>Published in the school's research journal as one of the top 5 researches of the year</li>
+                    </ul>
+                </div>
+            </article>
+    
+            <article class="entry">
+                <div class="entry-header">
+                    <div class="entry-header-line">
+                        <h3 class="entry-title">Website Design in WordPress</h3><p class="entry-date">2020</p>
+                    </div>
+                    <div class="entry-header-line">
+                        <p class="entry-place">Freelance</p>
+                    </div>
+                </div>
+                <div class="entry-body">
+                    <ul>
+                        <li>Designed a private school website with WordPress</li>
+                        <li>Formalized the style and design of the school's digital brand identity</li>
+                    </ul>
+                </div>
+            </article>
+    
+            <article class="entry">
+                <div class="entry-header">
+                    <div class="entry-header-line">
+                        <h3 class="entry-title">Enrollment Form Automation</h3><p class="entry-date">2020</p>
+                    </div>
+                    <div class="entry-header-line">
+                        <p class="entry-place">Freelance</p>
+                    </div>
+                </div>
+                
+                <div class="entry-body">
+                    <ul>
+                        <li>Built an online form to collect biodata and other enrollment information from over 500 elementary and high school students</li>
+                        <li>Saved several hours worth of manual labor by automating the generation of PDF enrollment forms from the responses using Microsoft Excel and VBA macros</li>
+                    </ul>
+                </div>
+            </article>
+    
+            <article class="entry">
+                <div class="entry-header">
+                    <div class="entry-header-line">
+                        <h3 class="entry-title">Automatic Temperature Scanner and Alcohol Dispenser</h3><p class="entry-date">2020</p>
+                    </div>
+                    <div class="entry-header-line">
+                        <p class="entry-place">Personal Project</p>
+                    </div>
+                </div>
+                
+                <div class="entry-body">
+                    <ul>
+                        <li>Designed a system for scanning body temperature and dispensing alcohol during the early days of the COVID-19 pandemic</li>
+                        <li>Built the system prototype with a Gizduino UNO, a non-contact temperature sensor, an LCD screen, a small speaker, and a small water pump</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="entry">
+                <div class="entry-header">
+                    <div class="entry-header-line">
+                        <h3 class="entry-title">ALERT: An Arduino-based Local Disaster Risk Management System</h3><p class="entry-date">2019</p>
+                    </div>
+                    <div class="entry-header-line">
+                        <p class="entry-place">Science and Technology Fair | Regional Level </p><p class="entry-aux">4th Place</p>
+                    </div>
+                </div>
+                
+                <div class="entry-body">
+                    <ul>
+                        <li>Collaborated with a team to develop an Arduino-based embedded system for real-time assessment of disaster risk using various environmental sensors and data processing</li>
+                        <li>Achieved 4th place in the Regional Science Fair and 1st place in the Division Science Fair for Robotics & Intelligent Machines projects</li>
+                    </ul>
+                </div>
+            </article>
+        </div>
+    </article>
+
+    <footer>
+        <hr>
+        <p class="copyright">Copyright &copy; 2024. John Adrian Cruz</p>
+    </footer>
+</body>
+</html>

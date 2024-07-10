@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jhndrncrz | About Me</title>
+    
+    <style>
+        @font-face {
+            font-family: dancing-script;
+            src: url("https://jhndrncrz.github.io/cip1101-personal-portfolio/dancing-script.woff");
+        }
+
+        @font-face {
+            font-family: script1-script-casual;
+            src: url("https://jhndrncrz.github.io/cip1101-personal-portfolio/script1-script-casual.woff");
+        }
+
+        body {
+            min-width: 600px;
+            width: 80%;
+            margin: auto;
+        }
+        /*Text*/
+        h2 {
+            margin: 0;
+            padding: 5pt;
+            font-family: script1-script-casual, sans-serif;
+            font-weight: bold;
+            color: white;
+            text-transform: uppercase;
+        }
+        h3 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            color: #e4001b;
+        }
+        p, li {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* Banner */
+        .banner {
+            height: 350pt;
+            margin: 10pt;
+
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #e4001b;
+        }
+
+        .banner-photo {
+            position: absolute;
+            height: 100%;
+            left: 0pt;
+        }
+
+        .banner-logo {
+            position: absolute;
+            width: 60%;
+        }
+
+        /* Footer */
+        .copyright {
+            text-align: center;
+        }
+
+        /* Sections */
+        .section {
+            margin: 10pt;
+        }
+
+        .blue {
+            border: 3pt solid #014a95;
+            box-shadow: 5pt 5pt #014a95;
+        }
+
+        .red {
+            border: 3pt solid #e4001b;
+            box-shadow: 5pt 5pt #e4001b;
+        }
+
+        .blue .section-header  {
+            width: 100%;
+            margin: 0;
+            
+            background-color: #014a95;
+        }
+
+        .red .section-header  {
+            width: 100%;
+            margin: 0;
+            
+            background-color: #e4001b;
+        }   
+
+        .section-body {
+            padding: 0pt;
+            display: flex;
+        }
+
+        .main-image {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .two-column {
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="banner">
+            <img class="banner-photo" src="https://jhndrncrz.github.io/cip1101-personal-portfolio/banner-photo.svg" alt="Posterized photo of jhndrncrz">
+            <img class="banner-logo" src="https://jhndrncrz.github.io/cip1101-images/banner-logo.svg" alt="Logo of jhndrncrz">
+        </div>
+    </header>
+	
+	<h2 style="text-align:center; color: #014a95; font-size: 72px; text-decoration: underline;">
+		A Gallery of Pictures
+	</h1>
+	
+	<div style="margin: auto; width: 1200px;">
+	<table>
+	<tbody>
+		<tr>
+			<td rowspan="3">
+				<article class="section blue">
+                    <div class="section-header">
+                        <h2>Photo 1</h2>
+                    </div>
+                    <div class="section-body">
+                        <img style="height: 720px" class="main-image" src="https://jhndrncrz.github.io/cip1101-images/img1.svg" alt="">
+                    </div>
+                </article>
+			</td>
+			<td colspan="2">
+				<article class="section red">
+                    <div class="section-header">
+                        <h2>Photo 2</h2>
+                    </div>
+                    <div class="section-body">
+                        <img style="height: 200px;" class="main-image" src="https://jhndrncrz.github.io/cip1101-images/img2.svg" alt=""> 
+                    </div>
+                </article>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<article class="section red">
+					<div class="section-header">
+						<h2>Photo 3</h2>
+					</div>
+					<div class="section-body">
+						<img style="height: 175px; vertical-align: top;"class="main-image" src="https://jhndrncrz.github.io/cip1101-images/img4.svg" alt=""> 
+					</div>
+				</article>
+			</td>
+			<td>
+				<article class="section blue">
+					<div class="section-header">
+						<h2>Photo 4</h2>
+					</div>
+					<div class="section-body">
+						<img style="height: 175px" class="main-image" src="https://jhndrncrz.github.io/cip1101-images/img3.svg" alt=""> 
+					</div>
+				</article>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<article class="section blue">
+					<div class="section-header">
+						<h2>Photo 5</h2>
+					</div>
+					<div class="section-body">
+						<img style="height: 175px" class="main-image" src="https://jhndrncrz.github.io/cip1101-images/img5.svg" alt=""> 
+					</div>
+				</article>
+			</td>
+			<td>
+				<article class="section red">
+					<div class="section-header">
+						<h2>Photo 6</h2>
+					</div>
+					<div class="section-body">
+						<img style="height: 175px" class="main-image" src="https://jhndrncrz.github.io/cip1101-images/img6.svg" alt=""> 
+					</div>
+				</article>
+			</td>
+		</tr>
+	</tbody>
+	</table>
+	</div>
+	
+    <!-- <main>
+        <div class="two-column">
+            <div style="flex: 5;">
+                <article class="section blue">
+                    <div class="section-header">
+                        <h2>Photo 1</h2>
+                    </div>
+                    <div class="section-body">
+                        <img class="main-image" src="https://jhndrncrz.github.io/cip1101-images/img1.svg" alt="">
+                    </div>
+                </article>
+            </div>
+            <div style="flex: 9;">
+                <article class="section red">
+                    <div class="section-header">
+                        <h2>Photo 2</h2>
+                    </div>
+                    <div class="section-body">
+                        <img class="main-image" src="https://jhndrncrz.github.io/cip1101-images/img2.svg" alt=""> 
+                    </div>
+                </article>
+                <div class="two-column">
+                    <div>
+                        <article class="section red">
+                            <div class="section-header">
+                                <h2>Photo 4</h2>
+                            </div>
+                            <div class="section-body">
+                                <img class="main-image" src="https://jhndrncrz.github.io/cip1101-images/img4.svg" alt=""> 
+                            </div>
+                        </article>
+						<div style="display: flex;">
+							<article class="section blue">
+								<div class="section-header">
+									<h2>Photo 5</h2>
+								</div>
+								<div class="section-body">
+									<img class="main-image" src="https://jhndrncrz.github.io/cip1101-images/img5.svg" alt=""> 
+								</div>
+							</article>
+						</div>
+                    </div>
+                    <div>
+                        <article class="section blue">
+                            <div class="section-header">
+                                <h2>Photo 3</h2>
+                            </div>
+                            <div class="section-body">
+                                <img class="main-image" src="https://jhndrncrz.github.io/cip1101-images/img3.svg" alt=""> 
+                            </div>
+                        </article>
+                        <div style="display: flex;">
+                            <article class="section red">
+                                <div class="section-header">
+                                    <h2>Photo 6</h2>
+                                </div>
+                                <div class="section-body">
+                                    <img class="main-image" src="https://jhndrncrz.github.io/cip1101-images/img6.svg" alt=""> 
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main> -->
+
+    <footer>
+        <hr>
+        <p class="copyright">Copyright &copy; 2024. John Adrian Cruz</p>
+    </footer>
+</body>
+</html>
